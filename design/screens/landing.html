@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Landing · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+
+
+<style>
+  .lp { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+  .lp-nav { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px) saturate(160%);
+            background: color-mix(in oklab, var(--paper) 78%, transparent); border-bottom: 1px solid var(--rule); }
+  .lp-nav .lp { display: flex; align-items: center; gap: 24px; height: 60px; }
+  .lp-hero { padding: 96px 0 72px; }
+  .lp-hero h1 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(2.8rem, 8.5vw, 5.4rem);
+                line-height: 0.96; letter-spacing: -0.035em; max-width: 15ch; }
+  .lp-hero h1 em { font-style: italic; color: var(--brass-deep); }
+  .lp-hero p { margin-top: 26px; max-width: 46ch; font-size: var(--text-md); line-height: 1.6; color: var(--ink-secondary); }
+  .lp-proof { display: grid; gap: 1px; background: var(--rule); border-block: 1px solid var(--rule); grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 768px) { .lp-proof { grid-template-columns: repeat(4, 1fr); } }
+  .lp-proof div { background: var(--paper); padding: 22px 20px; }
+  .lp-sec { padding: 84px 0; border-bottom: 1px solid var(--rule); }
+  .lp-sec h2 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; max-width: 18ch; }
+  .lp-feat { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--radius-lg); overflow: clip; margin-top: 36px; }
+  @media (min-width: 900px) { .lp-feat { grid-template-columns: repeat(3, 1fr); } }
+  .lp-feat > div { background: var(--surface); padding: 28px 24px; }
+  .lp-feat h3 { font-size: var(--text-md); margin-bottom: 8px; }
+  .lp-feat p { font-size: var(--text-sm); color: var(--ink-secondary); line-height: 1.6; }
+</style>
+
+<nav class="lp-nav"><div class="lp">
+  <a class="row gap-2" href="#"><span class="brandmark__glyph">S</span><span class="brandmark__word">SpendTrack</span></a>
+  <span class="grow"></span>
+  <a class="tiny secondary hide-mobile" href="#">Product</a>
+  <a class="tiny secondary hide-mobile" href="#">Security</a>
+  <a class="tiny secondary hide-mobile" href="#">Pricing</a>
+  <a class="btn btn--sm btn--secondary" href="signin.html">Sign in</a>
+  <a class="btn btn--sm btn--primary" href="signin.html">Start free</a>
+</div></nav>
+
+<header class="lp-hero"><div class="lp">
+  <div class="eyebrow">Personal finance, properly kept</div>
+  <h1>Know where the money <em>actually</em> went.</h1>
+  <p>Every account, every currency, every recurring charge — reconciled into one ledger you
+     can trust. The arithmetic is exact and deterministic. The AI explains it; it never guesses it.</p>
+  <div class="row gap-3 mt-6" style="flex-wrap:wrap">
+    <a class="btn btn--primary btn--lg" href="signin.html">Start free with Google</a>
+    <a class="btn btn--secondary btn--lg" href="dashboard.html">See a live demo</a>
+  </div>
+  <p class="tiny muted mt-3">No card required · Import from any bank CSV · Export everything, always</p>
+</div></header>
+
+<section class="lp-proof">
+  <div><div class="eyebrow">Tracked</div><div class="display" style="font-size:var(--text-xl);margin-top:6px">$1.4B</div><p class="tiny muted">across member ledgers</p></div>
+  <div><div class="eyebrow">Accuracy</div><div class="display" style="font-size:var(--text-xl);margin-top:6px">100%</div><p class="tiny muted">integer-cent arithmetic</p></div>
+  <div><div class="eyebrow">Currencies</div><div class="display" style="font-size:var(--text-xl);margin-top:6px">168</div><p class="tiny muted">with historical rates</p></div>
+  <div><div class="eyebrow">Import</div><div class="display" style="font-size:var(--text-xl);margin-top:6px">4 s</div><p class="tiny muted">for 10,000 rows</p></div>
+</section>
+
+<section class="lp-sec"><div class="lp">
+  <div class="eyebrow">The problem with expense trackers</div>
+  <h2>A transfer is not an expense. Most apps get this wrong.</h2>
+  <p class="mt-4 secondary" style="max-width:56ch;line-height:1.65">Move $500 from checking to savings and a naive tracker counts it as spending.
+    Pay your credit card and it double-counts every charge. SpendTrack models money movement properly:
+    transfers net to zero, card payments settle a liability, refunds reverse the original expense against
+    the original category and period.</p>
+  <div class="panel mt-6" style="max-width:520px">
+    
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">To Emergency Fund</span>
+    <span class="txn__meta"><span>Transfer</span><span>Checking → Savings</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Transfer</span><span class="txn__col hide-mobile">Checking → Savings</span>
+  <span class="txn__amount txn__amount--xfer">
+    <span class="num "><span class="num__cur">$</span>500<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+    
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Amex Gold payment</span>
+    <span class="txn__meta"><span>Card payment</span><span>Checking → Amex</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Card payment</span><span class="txn__col hide-mobile">Checking → Amex</span>
+  <span class="txn__amount txn__amount--xfer">
+    <span class="num "><span class="num__cur">$</span>1,240<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+    
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-7)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11V5a2 2 0 0 1 2-2h6l10 10-8 8z"/><circle cx="8" cy="8" r="1.4"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Refund · Nike Store</span>
+    <span class="txn__meta"><span>Reverses 02 Sep expense</span><span>Shopping</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Reverses 02 Sep expense</span><span class="txn__col hide-mobile">Shopping</span>
+  <span class="txn__amount txn__amount--in">
+    <span class="num ">+<span class="num__cur">$</span>129<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+    <div class="panel__foot row tiny"><span class="muted">Effect on September spending</span><span class="grow"></span><span class="num">−$129.00</span></div>
+  </div>
+</div></section>
+
+<section class="lp-sec"><div class="lp">
+  <div class="eyebrow">What you get</div>
+  <h2>One ledger for everything you own and owe.</h2>
+  <div class="lp-feat">
+    <div><h3>Every account type</h3><p>Cash, checking, savings, credit and debit cards, prepaid, digital wallets, brokerage, retirement, loans — each with the behaviour it actually has.</p></div><div><h3>Recurring that behaves</h3><p>Daily to yearly, fixed or variable, with pause, skip and weekend handling. Bills are estimated from history until you confirm.</p></div><div><h3>Budgets with pace</h3><p>A budget without a pace marker is a number. Ours shows whether you're ahead or behind for where you are in the period.</p></div><div><h3>Real multi-currency</h3><p>Accounts hold their own currency. Conversions use the rate on the transaction date, not today's.</p></div><div><h3>Receipts that file themselves</h3><p>Photograph it. Claude reads merchant, total, tax and line items, then matches it to the charge that already posted.</p></div><div><h3>An assistant with limits</h3><p>It can search, summarise and propose. Anything that changes your data stops and asks. It cannot reach the database directly.</p></div>
+  </div>
+</div></section>
+
+<section class="lp-sec"><div class="lp">
+  <div class="eyebrow">Security posture</div>
+  <h2>Built like something that holds your money data.</h2>
+  <ul class="col gap-3 mt-6" style="max-width:60ch">
+    <li class="row gap-3"><span style="color:var(--inflow);flex:none;margin-top:2px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><span class="secondary" style="line-height:1.6">Every server operation re-checks ownership. Client-supplied IDs are never trusted.</span></li><li class="row gap-3"><span style="color:var(--inflow);flex:none;margin-top:2px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><span class="secondary" style="line-height:1.6">Financial writes run inside database transactions — a transfer either moves both sides or neither.</span></li><li class="row gap-3"><span style="color:var(--inflow);flex:none;margin-top:2px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><span class="secondary" style="line-height:1.6">The AI never receives credentials or database access. It calls a fixed set of audited tools under your permissions.</span></li><li class="row gap-3"><span style="color:var(--inflow);flex:none;margin-top:2px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><span class="secondary" style="line-height:1.6">Uploads are MIME-sniffed, size-limited and stripped of metadata.</span></li><li class="row gap-3"><span style="color:var(--inflow);flex:none;margin-top:2px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><span class="secondary" style="line-height:1.6">Every financial change is recorded with actor, timestamp and before/after values.</span></li>
+  </ul>
+</div></section>
+
+<footer style="padding:64px 0"><div class="lp row gap-4" style="flex-wrap:wrap;align-items:flex-end">
+  <div class="col gap-2"><a class="row gap-2" href="#"><span class="brandmark__glyph">S</span><span class="brandmark__word">SpendTrack</span></a>
+    <span class="tiny muted">© 2025 SpendTrack. Your data, your ledger.</span></div>
+  <span class="grow"></span>
+  <a class="btn btn--primary" href="signin.html">Start free</a>
+</div></footer>
+
+<script src="../shell.js"></script>
+<script>mountShell("landing", { chrome: false });</script>
+</body>
+</html>

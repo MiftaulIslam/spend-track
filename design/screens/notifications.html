@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notifications · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Notifications</span>
+    <span class="appbar__sub">4 unread</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--ghost">Mark all read</button>
+</header>
+<main class="main">
+<div class="container" style="max-width:860px">
+  <div class="chiprow" style="padding-inline:0">
+    <button class="chip" aria-pressed="true">All</button><button class="chip">Unread <span class="badge">4</span></button>
+    <button class="chip">Bills</button><button class="chip">Budgets</button><button class="chip">Security</button>
+  </div>
+
+  <section class="section">
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);background:var(--brass-wash)">
+        <span class="txn__icon" style="--cat:var(--danger)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:600">Verizon Fios is overdue</b>
+          <span class="tiny muted">Due 12 Sep · $89.99 · 5 days late</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">2h ago</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);background:var(--brass-wash)">
+        <span class="txn__icon" style="--cat:var(--warning)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:600">Dining out is over budget</b>
+          <span class="tiny muted">$348.15 spent of $280.00 · 24% over</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">Today 09:12</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);background:var(--brass-wash)">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:600">Your weekly brief is ready</b>
+          <span class="tiny muted">Spending down 7% · 3 unused subscriptions found</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">Today 06:02</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);background:var(--brass-wash)">
+        <span class="txn__icon" style="--cat:var(--warning)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:600">Unusual charge detected</b>
+          <span class="tiny muted">$412.00 at Best Buy — 4.8× your typical spend there</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">Yesterday 18:44</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);">
+        <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:450">Salary received</b>
+          <span class="tiny muted">$3,210.00 into Chase Checking</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">30 Aug 09:00</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);">
+        <span class="txn__icon" style="--cat:var(--info)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:450">New sign-in</b>
+          <span class="tiny muted">Chrome on Windows · New York, US</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">28 Aug 21:03</span>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint);">
+        <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4h9l1 2h6v9h-7l-1-2H4"/></svg></span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm);font-weight:450">Goal milestone reached</b>
+          <span class="tiny muted">Japan fund passed $3,500</span>
+        </div>
+        <span class="tiny muted" style="white-space:nowrap">24 Aug 12:00</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Preferences</h2></div>
+    <div class="panel" style="overflow-x:auto">
+      <table class="table">
+        <thead><tr><th>Event</th><th style="text-align:center">In-app</th><th style="text-align:center">Push</th><th style="text-align:center">Email</th></tr></thead>
+        <tbody>
+          
+          <tr><td>Bill due soon</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+          <tr><td>Bill overdue</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+          <tr><td>Budget 80% reached</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Budget exceeded</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+          <tr><td>Unusual transaction</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Subscription renewing</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Trial ending</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+          <tr><td>Low balance</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Goal milestone</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Recurring created</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td><td style="text-align:center"><input type="checkbox" ></td>
+          </tr>
+          <tr><td>Monthly summary</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" ></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+          <tr><td>New sign-in</td>
+            <td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td><td style="text-align:center"><input type="checkbox" checked></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="panel__foot row gap-3">
+        <span class="tiny secondary">Quiet hours</span>
+        <input class="input input--num btn--sm" style="width:92px;height:32px" value="22:00">
+        <span class="tiny muted">to</span>
+        <input class="input input--num btn--sm" style="width:92px;height:32px" value="07:30">
+        <span class="tiny muted">Overdue bills and security alerts ignore quiet hours.</span>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("notifications", { chrome: true });</script>
+</body>
+</html>

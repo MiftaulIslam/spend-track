@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Debt · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Debt</span>
+    <span class="appbar__sub">$15,449.80 across 3 accounts</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Debt</button>
+</header>
+<main class="main">
+<div class="container">
+  <section style="padding:20px 0">
+    <div class="eyebrow">Total debt</div>
+    <div class="display mt-2"><span class="num "><span class="num__cur">$</span>15,449<span class="num__frac">.80</span></span></div>
+    <div class="row gap-2 mt-2 tiny">
+      <span class="badge badge--in"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg> −$1,842 this year</span>
+      <span class="muted">Weighted APR 11.4%</span>
+    </div>
+    <div class="mt-4"><svg class="sparkline" viewBox="0 0 320 64" preserveAspectRatio="none" style="width:100%;height:64px" aria-hidden="true">
+    <path d="M0,3 L29.090909090909093,7.638762996534254 L58.18181818181819,15.37003465742469 L87.27272727272727,20.008797653958943 L116.36363636363637,26.19381498267129 L145.45454545454544,32.37883231138363 L174.54545454545453,38.563849640095974 L203.63636363636363,43.202612636630235 L232.72727272727275,49.387629965342576 L261.8181818181818,54.02639296187683 L290.9090909090909,57.118901626233004 L320,61" fill="none" stroke="var(--inflow)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+  </section>
+
+  <div class="statgrid">
+    <div class="stat"><span class="stat__label">Monthly minimum</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>552<span class="num__frac">.22</span></span></span><span class="stat__delta ">3 accounts</span></div>
+    <div class="stat"><span class="stat__label">You pay</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>900<span class="num__frac">.00</span></span></span><span class="stat__delta ">+$347.78 extra</span></div>
+    <div class="stat"><span class="stat__label">Debt-free</span><span class="stat__value">Nov 2028</span><span class="stat__delta ">38 months</span></div>
+    <div class="stat"><span class="stat__label">Interest saved</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>2,184<span class="num__frac">.00</span></span></span><span class="stat__delta ">vs minimums</span></div>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Payoff strategy</h2><span class="section__meta">Avalanche</span></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="row gap-2 mb-4">
+        <button class="chip" aria-pressed="true">Avalanche · highest APR first</button>
+        <button class="chip">Snowball · smallest balance first</button>
+        <button class="chip">Custom</button>
+      </div>
+      <table class="table">
+        <thead><tr><th>Debt</th><th>APR</th><th class="n">Balance</th><th class="n">Payment</th><th>Clear by</th></tr></thead>
+        <tbody>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-1)"></span>Amex Gold</span></td><td class="num">24.74%</td><td class="n"><span class="num "><span class="num__cur">$</span>2,860<span class="num__frac">.40</span></span></td><td class="n"><span class="num "><span class="num__cur">$</span>515<span class="num__frac">.78</span></span></td><td>Mar 2026</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-2)"></span>Auto loan</span></td><td class="num">4.90%</td><td class="n"><span class="num "><span class="num__cur">$</span>12,240<span class="num__frac">.00</span></span></td><td class="n"><span class="num "><span class="num__cur">$</span>384<span class="num__frac">.22</span></span></td><td>Nov 2028</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-5)"></span>Chase Freedom</span></td><td class="num">0.00%</td><td class="n"><span class="num "><span class="num__cur">$</span>349<span class="num__frac">.40</span></span></td><td class="n"><span class="num "><span class="num__cur">$</span>0<span class="num__frac">.00</span></span></td><td>Mar 2026 · promo</td></tr>
+        </tbody>
+      </table>
+      <p class="tiny muted mt-3">Amortisation computed server-side with exact integer-cent arithmetic. Switching to snowball costs <b>$412.00</b> more interest but clears one account 4 months sooner.</p>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Auto loan · Toyota</h2><span class="section__meta">34 of 60 payments made</span></div>
+    <div class="panel">
+      <div class="panel__body" style="padding-top:16px">
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:43%"></div>
+  
+</div>
+        <div class="row tiny mt-2"><span class="muted">$9,360.00 paid of $21,600.00</span><span class="grow"></span><span class="muted">43%</span></div>
+      </div>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Payment · 24 Aug</span><span class="txn__meta"><span>Principal $334.22 · Interest $50.00</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>384<span class="num__frac">.22</span></span></span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Payment · 24 Jul</span><span class="txn__meta"><span>Principal $332.85 · Interest $51.37</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>384<span class="num__frac">.22</span></span></span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Payment · 24 Jun</span><span class="txn__meta"><span>Principal $331.49 · Interest $52.73</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>384<span class="num__frac">.22</span></span></span>
+</a>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("debts", { chrome: true });</script>
+</body>
+</html>

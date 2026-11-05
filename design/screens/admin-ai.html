@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin · AI · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+<div class="row gap-2" style="padding:7px 16px;background:var(--surface-inverse);color:var(--ink-inverse);font-size:var(--text-2xs)">
+  <svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><b>Platform administration</b>
+  <span style="opacity:.7">·  acting as qa.admin@spendtrack.test · every action here is audited</span>
+  <span class="grow"></span><a href="../screens/dashboard.html" style="color:var(--brass-bright)">Leave admin</a>
+</div>
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">AI analytics</span>
+    <span class="appbar__sub">184,022 requests · last 30 days</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--secondary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Range</button>
+</header>
+
+<div class="chiprow" style="padding-inline:16px;border-bottom:1px solid var(--rule)">
+  <a class="chip" href="admin-overview.html">Overview</a><a class="chip" href="admin-users.html">Users</a><a class="chip" href="admin-ai.html" aria-pressed="true">AI</a><a class="chip" href="admin-system.html">System</a>
+  <a class="chip" href="audit.html">Audit</a>
+  <a class="chip" href="#">Feature flags</a>
+  <a class="chip" href="#">Config</a>
+</div>
+<main class="main">
+<div class="container">
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">Requests</span><span class="stat__value">184,022</span><span class="stat__delta stat__delta--up">+14.2% MoM</span></div>
+    <div class="stat"><span class="stat__label">Estimated cost</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>1,842<span class="num__frac">.40</span></span></span><span class="stat__delta ">$0.13 / active user</span></div>
+    <div class="stat"><span class="stat__label">p50 latency</span><span class="stat__value">1,284 ms</span><span class="stat__delta stat__delta--up">−9% MoM</span></div>
+    <div class="stat"><span class="stat__label">Error rate</span><span class="stat__value">0.41%</span><span class="stat__delta stat__delta--down">748 failures</span></div>
+  </div>
+  <div class="statgrid mt-3">
+    <div class="stat"><span class="stat__label">Input tokens</span><span class="stat__value">412.8 M</span><span class="stat__delta ">avg 2,243 / req</span></div>
+    <div class="stat"><span class="stat__label">Output tokens</span><span class="stat__value">48.2 M</span><span class="stat__delta ">avg 262 / req</span></div>
+    <div class="stat"><span class="stat__label">Cache read</span><span class="stat__value">284.1 M</span><span class="stat__delta stat__delta--up">68.9% hit rate</span></div>
+    <div class="stat"><span class="stat__label">Tool calls</span><span class="stat__value">96,418</span><span class="stat__delta ">0.52 / request</span></div>
+  </div>
+
+  <div class="grid-auto mt-4">
+    <section class="panel">
+      <div class="panel__head"><h2 class="panel__title">Cost per day</h2><span class="panel__action muted">USD</span></div>
+      <div class="panel__body" style="padding-top:12px">
+        <div class="chart__bars"><div class="chart__bar" style="height:36.53846153846153%;--bar:var(--brass)"></div><div class="chart__bar" style="height:40.38461538461539%;--bar:var(--brass)"></div><div class="chart__bar" style="height:49.03846153846153%;--bar:var(--brass)"></div><div class="chart__bar" style="height:47.11538461538461%;--bar:var(--brass)"></div><div class="chart__bar" style="height:55.769230769230774%;--bar:var(--brass)"></div><div class="chart__bar" style="height:58.65384615384615%;--bar:var(--brass)"></div><div class="chart__bar" style="height:51.92307692307693%;--bar:var(--brass)"></div><div class="chart__bar" style="height:60.57692307692307%;--bar:var(--brass)"></div><div class="chart__bar" style="height:65.38461538461539%;--bar:var(--brass)"></div><div class="chart__bar" style="height:68.26923076923077%;--bar:var(--brass)"></div><div class="chart__bar" style="height:63.46153846153846%;--bar:var(--brass)"></div><div class="chart__bar" style="height:71.15384615384616%;--bar:var(--brass)"></div><div class="chart__bar" style="height:75.96153846153845%;--bar:var(--brass)"></div><div class="chart__bar" style="height:69.23076923076923%;--bar:var(--brass)"></div><div class="chart__bar" style="height:77.88461538461539%;--bar:var(--brass)"></div><div class="chart__bar" style="height:74.03846153846155%;--bar:var(--brass)"></div><div class="chart__bar" style="height:80.76923076923077%;--bar:var(--brass)"></div><div class="chart__bar" style="height:84.61538461538461%;--bar:var(--brass)"></div><div class="chart__bar" style="height:78.84615384615384%;--bar:var(--brass)"></div><div class="chart__bar" style="height:87.5%;--bar:var(--brass)"></div><div class="chart__bar" style="height:82.6923076923077%;--bar:var(--brass)"></div><div class="chart__bar" style="height:90.38461538461539%;--bar:var(--brass)"></div><div class="chart__bar" style="height:85.57692307692307%;--bar:var(--brass)"></div><div class="chart__bar" style="height:93.26923076923077%;--bar:var(--brass)"></div><div class="chart__bar" style="height:88.46153846153845%;--bar:var(--brass)"></div><div class="chart__bar" style="height:97.11538461538461%;--bar:var(--brass)"></div><div class="chart__bar" style="height:84.61538461538461%;--bar:var(--brass)"></div><div class="chart__bar" style="height:75.96153846153845%;--bar:var(--brass)"></div><div class="chart__bar" style="height:100%;--bar:var(--brass)"></div><div class="chart__bar" style="height:94.23076923076923%;--bar:var(--brass)"></div></div>
+        <div class="chart__axis"><span>18 Aug</span><span>01 Sep</span><span>17 Sep</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head"><h2 class="panel__title">Model split</h2></div>
+      <div class="panel__body">
+        <table class="table">
+          <thead><tr><th>Model</th><th class="n">Requests</th><th class="n">Cost</th><th class="n">p50</th></tr></thead>
+          <tbody>
+            <tr><td>claude-sonnet-5</td><td class="n">142,881</td><td class="n"><span class="num "><span class="num__cur">$</span>1,204<span class="num__frac">.10</span></span></td><td class="n">1,102 ms</td></tr>
+            <tr><td>claude-opus-5</td><td class="n">8,204</td><td class="n"><span class="num "><span class="num__cur">$</span>562<span class="num__frac">.80</span></span></td><td class="n">3,418 ms</td></tr>
+            <tr><td>claude-haiku-4-5</td><td class="n">32,937</td><td class="n"><span class="num "><span class="num__cur">$</span>75<span class="num__frac">.50</span></span></td><td class="n">412 ms</td></tr>
+          </tbody>
+        </table>
+        <p class="tiny muted mt-3">Categorisation and merchant matching run on Haiku; assistant conversations on Sonnet; the agent escalates to Opus only for multi-step planning.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Feature breakdown</h2></div>
+    <div class="panel" style="overflow-x:auto">
+      <table class="table">
+        <thead><tr><th>Feature</th><th class="n">Requests</th><th class="n">Avg in</th><th class="n">Avg out</th><th class="n">p50</th><th class="n">p95</th><th class="n">Errors</th><th class="n">Cost</th></tr></thead>
+        <tbody>
+          
+          <tr><td>Transaction categorisation</td><td class="n">84,210</td><td class="n muted">912</td>
+            <td class="n muted">64</td><td class="n">318 ms</td><td class="n muted">890 ms</td>
+            <td class="n" style="color:var(--ink-tertiary)">0.12%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>184<span class="num__frac">.20</span></span></td></tr>
+          <tr><td>Assistant conversation</td><td class="n">41,882</td><td class="n muted">3,418</td>
+            <td class="n muted">412</td><td class="n">1,284 ms</td><td class="n muted">4,120 ms</td>
+            <td class="n" style="color:var(--ink-tertiary)">0.68%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>982<span class="num__frac">.40</span></span></td></tr>
+          <tr><td>Receipt extraction</td><td class="n">18,204</td><td class="n muted">2,840</td>
+            <td class="n muted">318</td><td class="n">2,104 ms</td><td class="n muted">6,840 ms</td>
+            <td class="n" style="color:var(--warning)">1.42%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>412<span class="num__frac">.80</span></span></td></tr>
+          <tr><td>Weekly brief</td><td class="n">14,209</td><td class="n muted">6,120</td>
+            <td class="n muted">684</td><td class="n">3,418 ms</td><td class="n muted">8,210 ms</td>
+            <td class="n" style="color:var(--ink-tertiary)">0.31%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>184<span class="num__frac">.60</span></span></td></tr>
+          <tr><td>Anomaly detection</td><td class="n">12,841</td><td class="n muted">1,840</td>
+            <td class="n muted">142</td><td class="n">684 ms</td><td class="n muted">1,920 ms</td>
+            <td class="n" style="color:var(--ink-tertiary)">0.08%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>48<span class="num__frac">.20</span></span></td></tr>
+          <tr><td>Recurring detection</td><td class="n">8,204</td><td class="n muted">2,240</td>
+            <td class="n muted">196</td><td class="n">820 ms</td><td class="n muted">2,410 ms</td>
+            <td class="n" style="color:var(--ink-tertiary)">0.14%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>21<span class="num__frac">.40</span></span></td></tr>
+          <tr><td>Agent runs</td><td class="n">4,472</td><td class="n muted">8,410</td>
+            <td class="n muted">1204</td><td class="n">9,840 ms</td><td class="n muted">28,400 ms</td>
+            <td class="n" style="color:var(--warning)">2.10%</td>
+            <td class="n"><span class="num "><span class="num__cur">$</span>8<span class="num__frac">.80</span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Tool calls</h2><span class="section__meta">96,418 total</span></div>
+    <div class="panel"><div class="panel__body">
+      
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">search_transactions</span>
+          
+          <span class="grow"></span><span class="num muted">34,210</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:100%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">analyze_spending</span>
+          
+          <span class="grow"></span><span class="num muted">14,882</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:43.501900029231216%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">search_budgets</span>
+          
+          <span class="grow"></span><span class="num muted">11,204</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:32.75065770242619%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">calculate_summary</span>
+          
+          <span class="grow"></span><span class="num muted">9,841</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:28.76644256065478%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">search_accounts</span>
+          
+          <span class="grow"></span><span class="num muted">8,420</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:24.612686349020755%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">search_subscriptions</span>
+          
+          <span class="grow"></span><span class="num muted">6,210</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:18.152586962876352%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">generate_report</span>
+          
+          <span class="grow"></span><span class="num muted">4,820</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:14.089447529962%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">create_transaction</span>
+          <span class="badge badge--warn" style="margin-left:6px">mutating</span>
+          <span class="grow"></span><span class="num muted">3,418</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:9.991230634317452%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">update_budget</span>
+          <span class="badge badge--warn" style="margin-left:6px">mutating</span>
+          <span class="grow"></span><span class="num muted">1,842</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:5.384390529085063%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">create_goal</span>
+          <span class="badge badge--warn" style="margin-left:6px">mutating</span>
+          <span class="grow"></span><span class="num muted">884</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:2.584039754457761%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">create_transfer</span>
+          <span class="badge badge--warn" style="margin-left:6px">mutating</span>
+          <span class="grow"></span><span class="num muted">487</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:1.423560362467115%"></div>
+  
+</div></div>
+      </div>
+      <div style="padding:7px 0">
+        <div class="row tiny"><span class="num">update_transaction</span>
+          <span class="badge badge--warn" style="margin-left:6px">mutating</span>
+          <span class="grow"></span><span class="num muted">200</span></div>
+        <div class="mt-2">
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:0.5846243788365975%"></div>
+  
+</div></div>
+      </div>
+      <p class="tiny muted mt-3">Mutating tools are 6.1% of calls. Of 6,831 proposed mutations, 5,204 were confirmed by the user, 1,412 cancelled and 215 blocked by authorisation checks.</p>
+    </div></div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("admin-ai", { chrome: true });</script>
+</body>
+</html>

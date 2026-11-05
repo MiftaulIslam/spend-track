@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transaction detail · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  <button class="btn btn--icon btn--ghost hide-desktop" aria-label="Back"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="col">
+    <span class="appbar__title">Lilia</span>
+    <span class="appbar__sub">Dining out · 15 Sep 2025</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--icon btn--ghost" aria-label="More"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button>
+</header>
+<main class="main">
+<div class="container" style="max-width:760px">
+  <section style="padding:24px 0;text-align:center;border-bottom:1px solid var(--rule)">
+    <div class="txn__icon" style="--cat:var(--cat-1);width:48px;height:48px;margin:0 auto 12px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></div>
+    <div class="display">−<span class="num__cur">$</span>90<span class="num__frac">.00</span></span></div>
+    <div class="row gap-2 mt-3" style="justify-content:center">
+      <span class="badge badge--out">Expense</span>
+      <span class="badge">Cleared</span>
+      <span class="badge badge--info">Split 3 ways</span>
+    </div>
+  </section>
+
+  <dl class="panel mt-6">
+    <div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Account</dt><dd style="margin:0;font-size:var(--text-sm)">Amex Gold · ···4021</dd></div><div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Category</dt><dd style="margin:0;font-size:var(--text-sm)"><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-1)"></span>Dining out</span></dd></div><div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Merchant</dt><dd style="margin:0;font-size:var(--text-sm)">Lilia · Brooklyn, NY</dd></div><div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Date</dt><dd style="margin:0;font-size:var(--text-sm)">Mon 15 Sep 2025, 19:40</dd></div><div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Payment</dt><dd style="margin:0;font-size:var(--text-sm)">Contactless</dd></div><div class="row" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+        <dt class="tiny secondary" style="width:96px;flex:none">Tags</dt><dd style="margin:0;font-size:var(--text-sm)"><span class="row gap-1"><span class="badge">anniversary</span><span class="badge">reimbursable</span></span></dd></div>
+  </dl>
+
+  <section class="panel mt-4">
+    <div class="panel__head"><h2 class="panel__title">Split</h2><span class="panel__action muted">Total <span class="num "><span class="num__cur">$</span>270<span class="num__frac">.00</span></span></span></div>
+    
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-secondary)">MI</span>
+  <span class="txn__body"><span class="txn__name">You</span><span class="txn__meta"><span>Dining out</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>90<span class="num__frac">.00</span></span></span>
+</a>
+    
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--warning)">AR</span>
+  <span class="txn__body"><span class="txn__name">Ayesha R.</span><span class="txn__meta"><span>Owed · reminded 16 Sep</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>90<span class="num__frac">.00</span></span><small>unpaid</small></span>
+</a>
+    
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)">TK</span>
+  <span class="txn__body"><span class="txn__name">Tomas K.</span><span class="txn__meta"><span>Settled via Venmo</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>90<span class="num__frac">.00</span></span><small>settled</small></span>
+</a>
+  </section>
+
+  <section class="panel mt-4">
+    <div class="panel__head"><h2 class="panel__title">Receipt</h2><span class="panel__action">Replace</span></div>
+    <div class="panel__body">
+      <div class="row gap-3">
+        <div style="width:72px;height:96px;border-radius:var(--radius-sm);background:var(--surface-sunken);border:1px solid var(--rule);flex:none"></div>
+        <div class="col gap-1 tiny">
+          <b style="font-size:var(--text-sm)">lilia-15sep.jpg</b>
+          <span class="muted">1.4 MB · uploaded 15 Sep</span>
+          <span class="badge badge--in mt-2"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg> AI-extracted · 96% match</span>
+          <span class="muted">Merchant, total and tax matched the charge. Tip $38 detected.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel mt-4">
+    <div class="panel__head"><h2 class="panel__title">History</h2></div>
+    <ul class="panel__body col gap-3 tiny">
+      <li class="row gap-3"><span class="muted num" style="width:88px;flex:none">15 Sep 19:41</span><span>Created from Amex import</span></li>
+      <li class="row gap-3"><span class="muted num" style="width:88px;flex:none">15 Sep 19:41</span><span>Auto-categorised <b>Dining out</b> by rule <i>“Restaurant MCC 5812”</i></span></li>
+      <li class="row gap-3"><span class="muted num" style="width:88px;flex:none">15 Sep 22:10</span><span>Split into 3 by <b>you</b></span></li>
+      <li class="row gap-3"><span class="muted num" style="width:88px;flex:none">16 Sep 08:02</span><span>Tag <b>reimbursable</b> added by assistant (confirmed)</span></li>
+    </ul>
+  </section>
+
+  <div class="row gap-2 mt-6" style="flex-wrap:wrap">
+    <button class="btn btn--secondary">Edit</button>
+    <button class="btn btn--secondary">Duplicate</button>
+    <button class="btn btn--secondary">Record refund</button>
+    <button class="btn btn--ghost" style="color:var(--danger)">Delete</button>
+  </div>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("transaction-detail", { chrome: true });</script>
+</body>
+</html>

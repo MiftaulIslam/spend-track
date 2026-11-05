@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>States catalogue · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">State catalogue</span>
+    <span class="appbar__sub">Every surface ships all six</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  
+</header>
+<main class="main">
+<div class="container" style="max-width:1000px">
+
+  <section class="section" style="margin-top:20px">
+    <div class="section__head"><h2 class="section__title">Empty</h2>
+      <span class="section__meta">First run is a teaching moment, not a shrug</span></div>
+    <div class="grid-auto">
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+  <div class="empty__title">No transactions yet</div>
+  <p class="empty__body">Add your first expense and SpendTrack starts learning your merchants and categories.</p>
+  <button class="btn btn--primary btn--sm mt-2">Add expense</button>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></div>
+  <div class="empty__title">No budgets set</div>
+  <p class="empty__body">Budgets work best when they start from what you actually spend. We can propose limits from your last three months.</p>
+  <button class="btn btn--primary btn--sm mt-2">Propose budgets</button>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+  <div class="empty__title">No matches for “kinokuya”</div>
+  <p class="empty__body">Check the spelling, or search all transactions instead of this account.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Search everywhere</button>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></div>
+  <div class="empty__title">No results with these filters</div>
+  <p class="empty__body">Expenses over $500 in Groceries between 1–7 Sep returned nothing.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Clear filters</button>
+</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Loading</h2>
+      <span class="section__meta">Skeletons match the real layout's geometry</span></div>
+    <div class="grid-auto">
+      <div class="panel">
+        <div class="panel__head"><h3 class="panel__title">Transaction list</h3></div>
+        
+        <div class="row gap-3" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+          <div class="skel" style="width:34px;height:34px;border-radius:var(--radius-md);flex:none"></div>
+          <div class="col gap-2 grow"><div class="skel skel--text" style="width:52%"></div><div class="skel skel--text" style="width:32%"></div></div>
+          <div class="skel skel--text" style="width:62px"></div>
+        </div>
+        <div class="row gap-3" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+          <div class="skel" style="width:34px;height:34px;border-radius:var(--radius-md);flex:none"></div>
+          <div class="col gap-2 grow"><div class="skel skel--text" style="width:52%"></div><div class="skel skel--text" style="width:32%"></div></div>
+          <div class="skel skel--text" style="width:62px"></div>
+        </div>
+        <div class="row gap-3" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+          <div class="skel" style="width:34px;height:34px;border-radius:var(--radius-md);flex:none"></div>
+          <div class="col gap-2 grow"><div class="skel skel--text" style="width:52%"></div><div class="skel skel--text" style="width:32%"></div></div>
+          <div class="skel skel--text" style="width:62px"></div>
+        </div>
+        <div class="row gap-3" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+          <div class="skel" style="width:34px;height:34px;border-radius:var(--radius-md);flex:none"></div>
+          <div class="col gap-2 grow"><div class="skel skel--text" style="width:52%"></div><div class="skel skel--text" style="width:32%"></div></div>
+          <div class="skel skel--text" style="width:62px"></div>
+        </div>
+        <div class="row gap-3" style="padding:11px 16px;border-bottom:1px solid var(--rule-faint)">
+          <div class="skel" style="width:34px;height:34px;border-radius:var(--radius-md);flex:none"></div>
+          <div class="col gap-2 grow"><div class="skel skel--text" style="width:52%"></div><div class="skel skel--text" style="width:32%"></div></div>
+          <div class="skel skel--text" style="width:62px"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel__head"><h3 class="panel__title">Dashboard</h3></div>
+        <div class="panel__body" style="padding-top:12px">
+          <div class="skel skel--text" style="width:34%;height:9px"></div>
+          <div class="skel mt-3" style="width:62%;height:38px"></div>
+          <div class="skel mt-4" style="height:64px"></div>
+          <div class="statgrid mt-4" style="border:0;background:transparent;gap:8px">
+            <div class="skel skel--line" style="height:64px"></div><div class="skel skel--line" style="height:64px"></div><div class="skel skel--line" style="height:64px"></div><div class="skel skel--line" style="height:64px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Error</h2>
+      <span class="section__meta">Say what happened, what it means, what to do</span></div>
+    <div class="grid-auto">
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+  <div class="empty__title">Couldn't load your transactions</div>
+  <p class="empty__body">The server didn't respond in time. Your data is safe — this is a display problem, not a data problem.</p>
+  <div class="row gap-2 mt-2"><button class="btn btn--primary btn--sm">Try again</button><button class="btn btn--ghost btn--sm">Work offline</button></div>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+  <div class="empty__title">You don't have access to this</div>
+  <p class="empty__body">This account is private to its owner. Ask them to share it with the household if you need to see it.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Back to accounts</button>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+  <div class="empty__title">That file couldn't be read</div>
+  <p class="empty__body">spending.pdf is a scanned image, not a spreadsheet. Export a CSV, XLSX or JSON file from your bank instead.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Choose another file</button>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+  <div class="empty__title">The assistant is unavailable</div>
+  <p class="empty__body">Claude didn't respond. Everything else works normally — your data and calculations are unaffected.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Retry</button>
+</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Inline &amp; transient</h2></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="col gap-3">
+        <div class="row gap-2" style="flex-wrap:wrap">
+          <div class="toast"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg> Expense saved <button class="toast__action">Undo</button></div>
+          <div class="toast"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4.5l3 1.8"/></svg> Transaction restored <button class="toast__action">View</button></div>
+          <div class="toast"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg> Offline — changes will sync <button class="toast__action">Details</button></div>
+        </div>
+        <div class="callout callout--warn"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div><b>Possible duplicate.</b> A $19.99 Spotify charge on the same account and date already exists. <a href="#" style="text-decoration:underline">Compare</a> or <a href="#" style="text-decoration:underline">save anyway</a>.</div></div>
+        <div class="callout callout--info"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><b>Exchange rates are 9 hours stale.</b> Conversions use the last known rate and are marked with a dotted underline until the sync recovers.</div></div>
+        <div class="row gap-3" style="padding:12px;border:1px solid var(--rule);border-radius:var(--radius-md)">
+          <span class="typing"><i></i><i></i><i></i></span><span class="tiny muted">Assistant is reading 64 transactions…</span>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Success &amp; celebration</h2>
+      <span class="section__meta">Earned moments only — never for routine saves</span></div>
+    <div class="grid-auto">
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4h9l1 2h6v9h-7l-1-2H4"/></svg></div>
+  <div class="empty__title">Japan fund is fully funded</div>
+  <p class="empty__body">You hit $6,000 five weeks early. Contributions are paused until you tell us what's next.</p>
+  <div class="row gap-2 mt-2"><button class="btn btn--primary btn--sm">Start a new goal</button><button class="btn btn--ghost btn--sm">Keep saving</button></div>
+</div></div>
+      <div class="panel">
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></div>
+  <div class="empty__title">September reconciled</div>
+  <p class="empty__body">Chase Checking matches your statement to the cent across 52 transactions.</p>
+  <button class="btn btn--secondary btn--sm mt-2">View summary</button>
+</div></div>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("states", { chrome: true });</script>
+</body>
+</html>

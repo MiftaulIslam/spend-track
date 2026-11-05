@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Import · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Import</span>
+    <span class="appbar__sub">Step 3 of 4 · Review</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--ghost">Cancel</button>
+</header>
+<main class="main">
+<div class="container" style="max-width:940px">
+  <ol class="row gap-2 mt-4 tiny" style="flex-wrap:wrap">
+    
+      <li class="row gap-2">
+        <span style="width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-family:var(--font-mono);
+          background:var(--inflow);
+          color:var(--ink-inverse)">✓</span>
+        <span style="color:var(--ink)">Upload</span>
+        <span style="width:18px;height:1px;background:var(--rule-strong)"></span>
+      </li>
+      <li class="row gap-2">
+        <span style="width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-family:var(--font-mono);
+          background:var(--inflow);
+          color:var(--ink-inverse)">✓</span>
+        <span style="color:var(--ink)">Map columns</span>
+        <span style="width:18px;height:1px;background:var(--rule-strong)"></span>
+      </li>
+      <li class="row gap-2">
+        <span style="width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-family:var(--font-mono);
+          background:var(--ink);
+          color:var(--ink-inverse)">3</span>
+        <span style="color:var(--ink)">Review</span>
+        <span style="width:18px;height:1px;background:var(--rule-strong)"></span>
+      </li>
+      <li class="row gap-2">
+        <span style="width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-family:var(--font-mono);
+          background:var(--surface-sunken);
+          color:var(--ink-tertiary)">4</span>
+        <span style="color:var(--ink-tertiary)">Commit</span>
+        
+      </li>
+  </ol>
+
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">Rows found</span><span class="stat__value">248</span><span class="stat__delta ">chase-aug-2025.csv</span></div>
+    <div class="stat"><span class="stat__label">Will import</span><span class="stat__value">231</span><span class="stat__delta stat__delta--up">93%</span></div>
+    <div class="stat"><span class="stat__label">Duplicates</span><span class="stat__value">14</span><span class="stat__delta stat__delta--down">skipped</span></div>
+    <div class="stat"><span class="stat__label">Errors</span><span class="stat__value">3</span><span class="stat__delta stat__delta--down">need fixing</span></div>
+  </div>
+
+  <div class="callout mt-4" callout--warn"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div><b>3 rows can't be imported.</b> Two have unparseable dates and one has an amount of 0. Fix them inline or import the other 231 rows and handle these separately.</div></div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Column mapping</h2><button class="section__meta" style="background:none;border:0;cursor:pointer;text-decoration:underline">Change</button></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="grid-2">
+        
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Transaction Date</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--inflow)">Date</span></div>
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Description</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--inflow)">Merchant + note</span></div>
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Amount</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--inflow)">Amount (negative = expense)</span></div>
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Category</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--warning)">Category (fuzzy match)</span></div>
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Type</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--ink-tertiary)">Ignored</span></div>
+        <div class="row gap-2 tiny" style="padding:8px 0;border-bottom:1px solid var(--rule-faint)">
+          <span class="num muted" style="width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Memo</span>
+          <span style="color:var(--ink-disabled)">→</span>
+          <span style="color:var(--inflow)">Note</span></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Preview</h2><span class="section__meta">First 6 of 248 rows</span></div>
+    <div class="panel" style="overflow-x:auto">
+      <table class="table">
+        <thead><tr><th style="width:28px"></th><th>Date</th><th>Merchant</th><th>Category</th><th class="n">Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          
+          <tr>
+            <td><input type="checkbox" checked ></td>
+            <td class="num muted">01/08/2025</td><td>WHOLEFDS BKN 10259</td><td class="muted">Groceries</td>
+            <td class="n" style="color:var(--ink)"><span class="num ">−<span class="num__cur">$</span>92<span class="num__frac">.14</span></span></td>
+            <td><span class="badge badge--in">Import</span></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"  ></td>
+            <td class="num muted">01/08/2025</td><td>SPOTIFY USA</td><td class="muted">Entertainment</td>
+            <td class="n" style="color:var(--ink)"><span class="num ">−<span class="num__cur">$</span>19<span class="num__frac">.99</span></span></td>
+            <td><span class="badge badge--warn">Duplicate</span><div class="tiny muted">Matches existing txn #8821</div></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked ></td>
+            <td class="num muted">02/08/2025</td><td>NORTHWIND LABS PAYROLL</td><td class="muted">Salary</td>
+            <td class="n" style="color:var(--inflow)"><span class="num ">+<span class="num__cur">$</span>3,210<span class="num__frac">.00</span></span></td>
+            <td><span class="badge badge--in">Import</span></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked ></td>
+            <td class="num muted">02/08/2025</td><td>UBER *TRIP</td><td class="muted">Rideshare</td>
+            <td class="n" style="color:var(--ink)"><span class="num ">−<span class="num__cur">$</span>14<span class="num__frac">.20</span></span></td>
+            <td><span class="badge badge--in">Import</span></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"  disabled></td>
+            <td class="num muted">03/08/2025</td><td>—</td><td class="muted"></td>
+            <td class="n" style="color:var(--ink)">—</td>
+            <td><span class="badge badge--danger">Error</span><div class="tiny muted">Amount is zero</div></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked ></td>
+            <td class="num muted">03/08/2025</td><td>TST* LILIA</td><td class="muted">Restaurants</td>
+            <td class="n" style="color:var(--ink)"><span class="num ">−<span class="num__cur">$</span>124<span class="num__frac">.00</span></span></td>
+            <td><span class="badge badge--info">New merchant</span><div class="tiny muted">New merchant — will be created</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="row gap-2 mt-6"><button class="btn btn--primary">Import 231 transactions</button><button class="btn btn--secondary">Back to mapping</button></div>
+  <p class="tiny muted mt-3">The import runs in one database transaction. If any row fails at commit time, nothing is written and you keep the mapping.</p>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("import", { chrome: true });</script>
+</body>
+</html>

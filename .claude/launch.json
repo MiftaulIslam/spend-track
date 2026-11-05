@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "spendtrack-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "dev",
+        "--port",
+        "4600"
+      ],
+      "port": 4600
+    },
+    {
+      "name": "design-prototype",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "design/serve.mjs"
+      ],
+      "port": 4321
+    }
+  ]
+}

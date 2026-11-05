@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Budgets · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Budgets</span>
+    <span class="appbar__sub">September · 13 days left</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Budget</button>
+</header>
+<main class="main">
+<div class="container">
+  <section style="padding:20px 0 8px">
+    <div class="eyebrow">Overall · monthly</div>
+    <div class="row gap-3 mt-2" style="align-items:baseline">
+      <span class="display"><span class="num "><span class="num__cur">$</span>4,193<span class="num__frac">.76</span></span></span>
+      <span class="muted">of $5,200.00</span>
+    </div>
+    <div class="mt-4">
+<div class="meter meter--warn">
+  <div class="meter__fill" style="width:80.6%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div></div>
+    <div class="row tiny mt-2">
+      <span class="muted">80.6% spent</span><span class="grow"></span>
+      <span class="muted">Pace marker: 56.7% of month</span>
+    </div>
+    <div class="callout mt-4" callout--warn"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div>Spending is <b>24 points ahead of pace</b>. At this rate September closes at $7,400.00 — $2,200.00 over.</div></div>
+  </section>
+
+  <div class="chiprow" style="padding-inline:0">
+    <button class="chip" aria-pressed="true">Monthly</button>
+    <button class="chip">Weekly</button>
+    <button class="chip">Annual</button>
+    <button class="chip">Custom period</button>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">By category</h2><span class="section__meta">9 budgets</span></div>
+    <div class="panel">
+      
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-1)"></span>
+          <span class="budget-row__name">Dining out</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>348<span class="num__frac">.15</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>280<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--over">
+  <div class="meter__fill" style="width:100%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span style="color:var(--danger)">Over by $68.15 · Rollover +$40 from August applied</span>
+          <span>124%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-3)"></span>
+          <span class="budget-row__name">Groceries</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>512<span class="num__frac">.40</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>600<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--warn">
+  <div class="meter__fill" style="width:85.39999999999999%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$87.60 left · Tracking 4% above pace</span>
+          <span>85%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-4)"></span>
+          <span class="budget-row__name">Housing</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>1,650<span class="num__frac">.00</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>1,650<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:100%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$0.00 left · Fixed · fully allocated</span>
+          <span>100%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-2)"></span>
+          <span class="budget-row__name">Transport</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>96<span class="num__frac">.50</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>220<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:43.86363636363637%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$123.50 left · Under pace by 12 points</span>
+          <span>44%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-6)"></span>
+          <span class="budget-row__name">Utilities</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>419<span class="num__frac">.38</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>400<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--over">
+  <div class="meter__fill" style="width:100%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span style="color:var(--danger)">Over by $19.38 · Con Edison seasonal spike</span>
+          <span>105%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-5)"></span>
+          <span class="budget-row__name">Entertainment</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>88<span class="num__frac">.00</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>150<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:58.666666666666664%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$62.00 left</span>
+          <span>59%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-8)"></span>
+          <span class="budget-row__name">Health</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>24<span class="num__frac">.73</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>200<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:12.365%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$175.27 left · Rolls over to October</span>
+          <span>12%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-7)"></span>
+          <span class="budget-row__name">Shopping</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>172<span class="num__frac">.50</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>300<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:57.49999999999999%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$127.50 left</span>
+          <span>57%</span>
+        </div>
+      </a>
+      <a class="budget-row" href="#">
+        <div class="budget-row__top">
+          <span class="chip__dot" style="--cat:var(--cat-10)"></span>
+          <span class="budget-row__name">Personal care</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>62<span class="num__frac">.10</span></span></b> <span>/ <span class="num "><span class="num__cur">$</span>100<span class="num__frac">.00</span></span></span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:62.1%"></div>
+  <div class="meter__mark" style="left:56.7%"></div>
+</div>
+        <div class="budget-row__foot">
+          <span>$37.90 left</span>
+          <span>62%</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Six-month adherence</h2></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="chart__bars"><div class="chart__bar" style="height:82.14285714285714%;--bar:var(--transfer)"></div><div class="chart__bar" style="height:92.85714285714286%;--bar:var(--transfer)"></div><div class="chart__bar" style="height:78.57142857142857%;--bar:var(--transfer)"></div><div class="chart__bar" style="height:86.60714285714286%;--bar:var(--transfer)"></div><div class="chart__bar" style="height:100%;--bar:var(--transfer)"></div><div class="chart__bar" style="height:72.32142857142857%;--bar:var(--transfer)"></div></div>
+      <div class="chart__axis"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div>
+      <p class="tiny muted mt-3">Bars show spend as a percentage of budget. Two of the last six months closed over.</p>
+    </div></div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("budgets", { chrome: true });</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Household · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Household</span>
+    <span class="appbar__sub">Bergen St · 3 members</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Invite</button>
+</header>
+<main class="main">
+<div class="container" style="max-width:900px">
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">Shared accounts</span><span class="stat__value">4</span><span class="stat__delta ">of 9 total</span></div>
+    <div class="stat"><span class="stat__label">Shared budgets</span><span class="stat__value">6</span><span class="stat__delta ">of 9</span></div>
+    <div class="stat"><span class="stat__label">Combined spend</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>6,841<span class="num__frac">.20</span></span></span><span class="stat__delta ">September</span></div>
+    <div class="stat"><span class="stat__label">Pending invites</span><span class="stat__value">1</span><span class="stat__delta ">expires in 5 days</span></div>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Members</h2></div>
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--brass);width:34px;height:34px">MI</span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Miftaul Islam</b>
+          <span class="tiny muted">webmakers3bd@gmail.com · Full access including billing and deletion</span>
+        </div>
+        <span class="badge">Owner</span>
+        <button class="btn btn--icon btn--ghost" aria-label="Manage"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--transfer);width:34px;height:34px">AR</span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Ayesha Rahman</b>
+          <span class="tiny muted">ayesha@example.com · Can manage accounts, budgets and members</span>
+        </div>
+        <span class="badge">Admin</span>
+        <button class="btn btn--icon btn--ghost" aria-label="Manage"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--inflow);width:34px;height:34px">ZI</span>
+        <div class="col grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Zaid Islam</b>
+          <span class="tiny muted">zaid@example.com · Can add and edit their own transactions</span>
+        </div>
+        <span class="badge">Member</span>
+        <button class="btn btn--icon btn--ghost" aria-label="Manage"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;opacity:.7">
+        <span class="txn__icon" style="--cat:var(--ink-tertiary);width:34px;height:34px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 1 1 12 0c0 4 1.5 5.5 2 6H4c.5-.5 2-2 2-6Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span>
+        <div class="col grow"><b style="font-size:var(--text-sm)">nadia@example.com</b>
+          <span class="tiny muted">Invited 14 Sep as Viewer · expires 22 Sep</span></div>
+        <button class="btn btn--sm btn--ghost">Resend</button><button class="btn btn--sm btn--ghost">Revoke</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Permission matrix</h2></div>
+    <div class="panel" style="overflow-x:auto">
+      <table class="table">
+        <thead><tr><th>Capability</th><th style="text-align:center">Owner</th><th style="text-align:center">Admin</th><th style="text-align:center">Member</th><th style="text-align:center">Viewer</th></tr></thead>
+        <tbody>
+          
+          <tr><td>View shared accounts & transactions</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td></tr>
+          <tr><td>Create own transactions</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Edit any transaction</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Manage shared accounts</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Manage budgets & goals</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Import & export data</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Invite or remove members</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Change member roles</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Delete the household</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+          <tr><td>Use the AI assistant</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td></tr>
+          <tr><td>Run AI mutations</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--inflow)">●</td><td style="text-align:center;color:var(--ink-disabled)">—</td><td style="text-align:center;color:var(--ink-disabled)">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Shared with the household</h2></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Chase Checking</span><span class="txn__meta"><span>All members can view · admins can edit</span></span></span>
+  <span class="txn__amount">Shared</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Rent budget</span><span class="txn__meta"><span>All members can view</span></span></span>
+  <span class="txn__amount">Shared</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Amex Gold</span><span class="txn__meta"><span>Private to you</span></span></span>
+  <span class="txn__amount">Private</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 5v13"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Fidelity Brokerage</span><span class="txn__meta"><span>Private to you</span></span></span>
+  <span class="txn__amount">Private</span>
+</a>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("household", { chrome: true });</script>
+</body>
+</html>

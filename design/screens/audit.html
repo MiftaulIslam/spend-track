@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Activity log · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Activity log</span>
+    <span class="appbar__sub">Last 30 days · 412 events</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--secondary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Filter</button><button class="btn btn--sm btn--ghost"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg> Export</button>
+</header>
+<main class="main">
+<div class="container" style="max-width:940px">
+  <div class="chiprow" style="padding-inline:0">
+    <button class="chip" aria-pressed="true">All</button><button class="chip">Transactions</button>
+    <button class="chip">Accounts</button><button class="chip">Budgets</button>
+    <button class="chip">AI actions</button><button class="chip">Security</button>
+  </div>
+
+  <section class="section">
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">17 Sep 09:16</span>
+        <span style="width:3px;align-self:stretch;background:var(--transfer);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>You</b> · Updated transaction</span>
+          <span class="tiny muted">Blue Bottle Coffee</span>
+          <span class="tiny num muted" style="margin-top:2px">category: Coffee shops → Dining out</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">17 Sep 08:31</span>
+        <span style="width:3px;align-self:stretch;background:var(--brass);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>Assistant (confirmed by you)</b> · Updated budget</span>
+          <span class="tiny muted">Dining out · monthly</span>
+          <span class="tiny num muted" style="margin-top:2px">limitMinor: 28000 → 34000</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">16 Sep 22:10</span>
+        <span style="width:3px;align-self:stretch;background:var(--transfer);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>You</b> · Split transaction</span>
+          <span class="tiny muted">Lilia · $270.00</span>
+          <span class="tiny num muted" style="margin-top:2px">1 split → 3 splits</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">16 Sep 19:02</span>
+        <span style="width:3px;align-self:stretch;background:var(--ink-tertiary);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>System · rule</b> · Categorised transaction</span>
+          <span class="tiny muted">TST* LILIA</span>
+          <span class="tiny num muted" style="margin-top:2px">category: null → Dining out</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">16 Sep 09:00</span>
+        <span style="width:3px;align-self:stretch;background:var(--inflow);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>Ayesha Rahman</b> · Created transaction</span>
+          <span class="tiny muted">Whole Foods Market</span>
+          <span class="tiny num muted" style="margin-top:2px">amountMinor: 8432, account: Chase Checking</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">15 Sep 14:22</span>
+        <span style="width:3px;align-self:stretch;background:var(--danger);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>You</b> · Deleted transaction</span>
+          <span class="tiny muted">Duplicate Uber charge</span>
+          <span class="tiny num muted" style="margin-top:2px">amountMinor: 1840, restored within 30 days</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">15 Sep 09:41</span>
+        <span style="width:3px;align-self:stretch;background:var(--ink-tertiary);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>System · import</b> · Imported transactions</span>
+          <span class="tiny muted">chase-aug-2025.csv</span>
+          <span class="tiny num muted" style="margin-top:2px">231 created, 14 duplicates skipped</span>
+        </div>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="num tiny muted" style="width:96px;flex:none;padding-top:2px">14 Sep 20:15</span>
+        <span style="width:3px;align-self:stretch;background:var(--info);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0">
+          <span style="font-size:var(--text-sm)"><b>You</b> · Signed in</span>
+          <span class="tiny muted">Chrome on Windows</span>
+          <span class="tiny num muted" style="margin-top:2px">ip: 74.12.•••.•••, New York US</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="callout callout--info mt-4"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div>Activity records are append-only and cannot be edited or deleted from the app. Financial records keep their full before/after payload for 7 years; security events for 2 years.</div></div>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("audit", { chrome: true });</script>
+</body>
+</html>

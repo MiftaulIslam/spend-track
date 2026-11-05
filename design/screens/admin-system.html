@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin · System · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+<div class="row gap-2" style="padding:7px 16px;background:var(--surface-inverse);color:var(--ink-inverse);font-size:var(--text-2xs)">
+  <svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><b>Platform administration</b>
+  <span style="opacity:.7">·  acting as qa.admin@spendtrack.test · every action here is audited</span>
+  <span class="grow"></span><a href="../screens/dashboard.html" style="color:var(--brass-bright)">Leave admin</a>
+</div>
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">System health</span>
+    <span class="appbar__sub">2 open incidents</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--secondary">Runbook</button>
+</header>
+
+<div class="chiprow" style="padding-inline:16px;border-bottom:1px solid var(--rule)">
+  <a class="chip" href="admin-overview.html">Overview</a><a class="chip" href="admin-users.html">Users</a><a class="chip" href="admin-ai.html">AI</a><a class="chip" href="admin-system.html" aria-pressed="true">System</a>
+  <a class="chip" href="audit.html">Audit</a>
+  <a class="chip" href="#">Feature flags</a>
+  <a class="chip" href="#">Config</a>
+</div>
+<main class="main">
+<div class="container">
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">API p50</span><span class="stat__value">42 ms</span><span class="stat__delta ">p95 184 ms</span></div>
+    <div class="stat"><span class="stat__label">Error rate (1h)</span><span class="stat__value">0.08%</span><span class="stat__delta stat__delta--up">14 of 18,204</span></div>
+    <div class="stat"><span class="stat__label">DB connections</span><span class="stat__value">18 / 60</span><span class="stat__delta ">pool healthy</span></div>
+    <div class="stat"><span class="stat__label">Storage</span><span class="stat__value">412 GB</span><span class="stat__delta ">of 1 TB</span></div>
+  </div>
+
+  <div class="callout mt-4" callout--danger"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div><b>exchange-rate-sync</b> has failed 2 of its last 3 runs (upstream returned 503). Rates last updated 9 hours ago. Conversions currently fall back to the most recent stored rate and are flagged as stale in the UI.</div></div>
+
+  <div class="grid-auto mt-4">
+    <section class="panel">
+      <div class="panel__head"><h2 class="panel__title">Background jobs</h2><span class="panel__action muted">Last 24 h</span></div>
+      <div class="panel__body" style="padding:0 0 8px">
+        <table class="table">
+          <thead><tr><th>Job</th><th>Schedule</th><th class="n">Runs</th><th class="n">Failed</th><th>Last run</th></tr></thead>
+          <tbody>
+            
+            <tr><td class="num">recurring-materialise</td><td class="muted">every 15 min</td><td class="n">96</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">2 min ago</span></td></tr>
+            <tr><td class="num">bill-reminders</td><td class="muted">hourly</td><td class="n">24</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">14 min ago</span></td></tr>
+            <tr><td class="num">exchange-rate-sync</td><td class="muted">every 6 h</td><td class="n">4</td>
+              <td class="n" style="color:var(--danger)">2</td>
+              <td><span class="badge badge--danger">9 h ago</span></td></tr>
+            <tr><td class="num">budget-alerts</td><td class="muted">every 30 min</td><td class="n">48</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">6 min ago</span></td></tr>
+            <tr><td class="num">anomaly-scan</td><td class="muted">hourly</td><td class="n">24</td>
+              <td class="n" style="color:var(--danger)">1</td>
+              <td><span class="badge badge--warn">22 min ago</span></td></tr>
+            <tr><td class="num">weekly-brief</td><td class="muted">Mon 06:00</td><td class="n">1</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">2 d ago</span></td></tr>
+            <tr><td class="num">receipt-ocr-queue</td><td class="muted">continuous</td><td class="n">1842</td>
+              <td class="n" style="color:var(--danger)">8</td>
+              <td><span class="badge badge--in">just now</span></td></tr>
+            <tr><td class="num">export-builder</td><td class="muted">on demand</td><td class="n">41</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">1 h ago</span></td></tr>
+            <tr><td class="num">retention-sweep</td><td class="muted">daily 03:00</td><td class="n">1</td>
+              <td class="n" style="color:var(--ink-tertiary)">0</td>
+              <td><span class="badge badge--in">14 h ago</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head"><h2 class="panel__title">Database</h2></div>
+      <div class="panel__body">
+        <table class="table"><tbody>
+          <tr><td>Size</td><td class="n num">84.2 GB</td></tr><tr><td>Largest table</td><td class="n num">transactions · 41.8 GB</td></tr><tr><td>Row count</td><td class="n num">4,182,904</td></tr><tr><td>Index hit rate</td><td class="n num">99.82%</td></tr><tr><td>Slowest query p95</td><td class="n num">184 ms</td></tr><tr><td>Replication lag</td><td class="n num">12 ms</td></tr><tr><td>Last backup</td><td class="n num">17 Sep 03:00 UTC</td></tr>
+        </tbody></table>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Error stream</h2><span class="section__meta">Grouped · last 24 h</span></div>
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span style="width:3px;align-self:stretch;background:var(--danger);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0"><b class="num" style="font-size:var(--text-sm)">UpstreamUnavailableError</b>
+          <span class="tiny muted num">exchange-rate-sync · GET api.exchangerate.host → 503</span></div>
+        <span class="num tiny">2×</span><span class="tiny muted" style="white-space:nowrap">9 h ago</span>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span style="width:3px;align-self:stretch;background:var(--warning);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0"><b class="num" style="font-size:var(--text-sm)">ReceiptExtractionTimeout</b>
+          <span class="tiny muted num">receipt-ocr-queue · Anthropic request > 30 s</span></div>
+        <span class="num tiny">8×</span><span class="tiny muted" style="white-space:nowrap">41 min ago</span>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span style="width:3px;align-self:stretch;background:var(--warning);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0"><b class="num" style="font-size:var(--text-sm)">ZodValidationError</b>
+          <span class="tiny muted num">POST /api/transactions · amountMinor expected integer</span></div>
+        <span class="num tiny">14×</span><span class="tiny muted" style="white-space:nowrap">12 min ago</span>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span style="width:3px;align-self:stretch;background:var(--info);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0"><b class="num" style="font-size:var(--text-sm)">ForbiddenError</b>
+          <span class="tiny muted num">GET /api/accounts/:id · ownership check failed</span></div>
+        <span class="num tiny">6×</span><span class="tiny muted" style="white-space:nowrap">2 h ago</span>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span style="width:3px;align-self:stretch;background:var(--info);border-radius:2px;flex:none"></span>
+        <div class="col grow" style="min-width:0"><b class="num" style="font-size:var(--text-sm)">RateLimitExceeded</b>
+          <span class="tiny muted num">POST /api/ai/chat · 30 req/min per user</span></div>
+        <span class="num tiny">41×</span><span class="tiny muted" style="white-space:nowrap">6 min ago</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Authentication events</h2><span class="section__meta">Last hour</span></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+  <span class="txn__body"><span class="txn__name">412 successful sign-ins</span><span class="txn__meta"><span>Google OAuth 384 · password 28</span></span></span>
+  <span class="txn__amount">412</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--warning)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">18 failed password attempts</span><span class="txn__meta"><span>Across 11 accounts · 2 hit the lockout threshold</span></span></span>
+  <span class="txn__amount">18</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--info)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">4 sessions revoked</span><span class="txn__meta"><span>3 by users, 1 by admin action</span></span></span>
+  <span class="txn__amount">4</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--danger)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">1 rate-limit block</span><span class="txn__meta"><span>IP 203.0.113.44 · 120 sign-in attempts in 60 s</span></span></span>
+  <span class="txn__amount">1</span>
+</a>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("admin-system", { chrome: true });</script>
+</body>
+</html>

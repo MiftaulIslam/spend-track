@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rules · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Rules</span>
+    <span class="appbar__sub">9 active · 1,842 applications</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Rule</button>
+</header>
+<main class="main">
+<div class="container">
+  <section class="section" style="margin-top:16px">
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Restaurant MCC → Dining out</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When merchant category code is 5812</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Set category to Dining out</span>
+          <span class="tiny muted mt-1">Applied 412 times</span>
+        </div>
+        <span class="badge badge--in">Active</span>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Whole Foods → Groceries</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When merchant contains “WHOLEFDS”</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Set merchant Whole Foods Market, category Groceries</span>
+          <span class="tiny muted mt-1">Applied 68 times</span>
+        </div>
+        <span class="badge badge--in">Active</span>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Large charges need review</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When amount > $500 and type is expense</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Flag for review, send notification</span>
+          <span class="tiny muted mt-1">Applied 14 times</span>
+        </div>
+        <span class="badge badge--in">Active</span>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Payroll → Salary</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When description contains “PAYROLL”</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Set category Salary, mark as income</span>
+          <span class="tiny muted mt-1">Applied 21 times</span>
+        </div>
+        <span class="badge badge--in">Active</span>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--brass)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Card payments aren't expenses</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When transfer between Checking and any credit card</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Classify as credit card payment</span>
+          <span class="tiny muted mt-1">Applied 36 times</span>
+        </div>
+        <span class="badge badge--in">Active</span>
+      </div>
+      <div class="row gap-3" style="padding:14px 16px;border-bottom:1px solid var(--rule-faint);align-items:flex-start">
+        <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <div class="col gap-1 grow" style="min-width:0">
+          <b style="font-size:var(--text-sm)">Business meals</b>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">If</b> When category is Dining out and tag “client”</span>
+          <span class="tiny muted"><b style="color:var(--ink-secondary)">Then</b> Add tag deductible</span>
+          <span class="tiny muted mt-1">Applied 9 times</span>
+        </div>
+        <span class="badge ">Paused</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Rule builder</h2><span class="section__meta">Preview</span></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="col gap-4">
+        <div class="col gap-2">
+          <div class="eyebrow">When all of these are true</div>
+          <div class="row gap-2" style="flex-wrap:wrap">
+            <select class="input" style="width:auto"><option>Merchant</option><option>Amount</option><option>Category</option><option>Account</option><option>Description</option><option>Day of week</option></select>
+            <select class="input" style="width:auto"><option>contains</option><option>equals</option><option>starts with</option><option>matches regex</option></select>
+            <input class="input" style="width:auto;flex:1;min-width:140px" value="WHOLEFDS">
+            <button class="btn btn--icon btn--ghost" aria-label="Remove"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+          <div class="row gap-2" style="flex-wrap:wrap">
+            <select class="input" style="width:auto"><option>Amount</option></select>
+            <select class="input" style="width:auto"><option>is greater than</option></select>
+            <input class="input input--num" style="width:auto;flex:1;min-width:120px" value="20.00">
+            <button class="btn btn--icon btn--ghost" aria-label="Remove"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+          <button class="chip" style="align-self:flex-start"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Add condition</button>
+        </div>
+        <div class="col gap-2">
+          <div class="eyebrow">Then do this</div>
+          <div class="row gap-2" style="flex-wrap:wrap">
+            <select class="input" style="width:auto"><option>Set category</option><option>Set merchant</option><option>Add tag</option><option>Flag for review</option><option>Notify me</option><option>Skip from budgets</option></select>
+            <select class="input" style="width:auto;flex:1;min-width:140px"><option>Groceries</option></select>
+          </div>
+          <button class="chip" style="align-self:flex-start"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Add action</button>
+        </div>
+        <div class="callout callout--brass"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><div><b>Dry run:</b> this rule would match <b>68 existing transactions</b> and change the category on 51 of them. <a href="#" style="text-decoration:underline">See which</a></div></div>
+        <div class="row gap-2"><button class="btn btn--primary">Save rule</button><button class="btn btn--secondary">Save and apply to history</button></div>
+      </div>
+    </div></div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("rules", { chrome: true });</script>
+</body>
+</html>

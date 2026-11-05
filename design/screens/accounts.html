@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accounts · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Accounts</span>
+    <span class="appbar__sub">9 open · 2 need reconciling</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Add</button>
+</header>
+<main class="main">
+<div class="container">
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">Assets</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>63,741<span class="num__frac">.20</span></span></span><span class="stat__delta ">6 accounts</span></div>
+    <div class="stat"><span class="stat__label">Liabilities</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>15,449<span class="num__frac">.80</span></span></span><span class="stat__delta ">3 accounts</span></div>
+    <div class="stat"><span class="stat__label">Net worth</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>48,291<span class="num__frac">.40</span></span></span><span class="stat__delta stat__delta--up">+2.7% MoM</span></div>
+    <div class="stat"><span class="stat__label">Cash on hand</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>11,240<span class="num__frac">.55</span></span></span><span class="stat__delta ">Liquid</span></div>
+  </div>
+
+  <div class="callout mt-4 callout--warn"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div><b>Chase Checking</b> hasn't been reconciled since 2 Sep. Recorded balance is <span class="num "><span class="num__cur">$</span>8,240<span class="num__frac">.12</span></span>. <a href="reconciliation.html" style="text-decoration:underline">Reconcile now</a></div></div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Cash &amp; banking</h2><span class="section__meta num"><span class="num "><span class="num__cur">$</span>11,240<span class="num__frac">.55</span></span></span></div>
+    <div class="panel">
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-6)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Chase Checking</span><span class="txn__meta"><span>Checking · ···8821 · USD</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>8,240<span class="num__frac">.12</span></span><small>needs reconcile</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Ally Savings</span><span class="txn__meta"><span>Savings · 4.20% APY · USD</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>2,600<span class="num__frac">.43</span></span><small>+$9.11 interest</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Cash</span><span class="txn__meta"><span>Physical wallet · USD</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>400<span class="num__frac">.00</span></span></span>
+</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Cards</h2><span class="section__meta num">−<span class="num__cur">$</span>3,209<span class="num__frac">.80</span></span></span></div>
+    <div class="panel">
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-1)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Amex Gold</span><span class="txn__meta"><span>Credit · ···4021 · $10,000 limit</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>2,860<span class="num__frac">.40</span></span><small>due 02 Oct</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-5)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Chase Freedom</span><span class="txn__meta"><span>Credit · ···9910 · $5,000 limit</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>349<span class="num__frac">.40</span></span><small>0% until Mar</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-2)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Revolut</span><span class="txn__meta"><span>Prepaid · EUR</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">€</span>452<span class="num__frac">.10</span></span><small>≈ $489.27</small></span>
+</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Investments &amp; digital</h2><span class="section__meta num"><span class="num "><span class="num__cur">$</span>52,011<span class="num__frac">.90</span></span></span></div>
+    <div class="panel">
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 5v13"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Fidelity Brokerage</span><span class="txn__meta"><span>Investment · taxable</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>38,420<span class="num__frac">.00</span></span><small>+6.2% YTD</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-8)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 5v13"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Vanguard 401(k)</span><span class="txn__meta"><span>Investment · retirement</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>12,904<span class="num__frac">.40</span></span><small>+4.9% YTD</small></span>
+</a>
+      
+<a class="txn" href="account-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-11)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Wise Multi-currency</span><span class="txn__meta"><span>Digital wallet · USD · EUR · JPY</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>687<span class="num__frac">.50</span></span><small>3 balances</small></span>
+</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Loans</h2><span class="section__meta num">−<span class="num__cur">$</span>12,240<span class="num__frac">.00</span></span></span></div>
+    <div class="panel">
+      
+<a class="txn" href="debts.html">
+  <span class="txn__icon" style="--cat:var(--cat-4)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l7 7 4-4 7 7"/><path d="M21 17v-5h-5"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Auto loan · Toyota</span><span class="txn__meta"><span>Liability · 4.9% APR · 34 mo left</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>12,240<span class="num__frac">.00</span></span><small>$384.22/mo</small></span>
+</a>
+    </div>
+  </section>
+
+  <p class="tiny muted mt-6" style="text-align:center">Archived accounts (2) are hidden. <a href="#" style="text-decoration:underline">Show archived</a></p>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("accounts", { chrome: true });</script>
+</body>
+</html>

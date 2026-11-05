@@ -1,0 +1,4 @@
+.next/
+src/generated/
+design/out/
+pnpm-lock.yaml

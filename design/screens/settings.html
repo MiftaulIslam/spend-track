@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Settings · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Settings</span>
+    <span class="appbar__sub">Miftaul Islam</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  
+</header>
+<main class="main">
+<div class="container" style="max-width:820px">
+  <section class="section" style="margin-top:16px">
+    <div class="panel">
+      <div class="row gap-3" style="padding:18px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--brass);width:48px;height:48px;font-size:16px">MI</span>
+        <div class="col grow"><b>Miftaul Islam</b><span class="tiny muted">webmakers3bd@gmail.com · Google account</span>
+          <span class="tiny muted">Member since March 2024</span></div>
+        <button class="btn btn--sm btn--secondary">Edit</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Preferences</h2></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="col gap-3">
+        <div class="grid-2">
+          <label class="field"><span class="field__label">Base currency</span>
+            <select class="input"><option>USD — US Dollar</option><option>EUR — Euro</option><option>GBP — Pound Sterling</option><option>BDT — Bangladeshi Taka</option></select>
+            <span class="field__hint">All totals and reports convert to this currency.</span></label>
+          <label class="field"><span class="field__label">Locale</span>
+            <select class="input"><option>English (United States)</option><option>English (United Kingdom)</option></select></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span class="field__label">First day of week</span>
+            <select class="input"><option>Monday</option><option>Sunday</option></select></label>
+          <label class="field"><span class="field__label">Month starts on</span>
+            <input class="input input--num" value="1"><span class="field__hint">Set to your payday for pay-cycle budgeting.</span></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span class="field__label">Number format</span>
+            <select class="input"><option>1,234.56</option><option>1.234,56</option><option>1 234,56</option></select></label>
+          <label class="field"><span class="field__label">Theme</span>
+            <div class="row gap-2"><button class="chip" aria-pressed="true">System</button><button class="chip">Light</button><button class="chip">Dark</button></div></label>
+        </div>
+        <label class="row gap-3" style="padding:10px 0;border-top:1px solid var(--rule-faint)">
+          <input type="checkbox" checked><span class="col"><b class="tiny">Hide balances by default</b>
+            <span class="tiny muted">Amounts are masked until you tap to reveal. Useful in public.</span></span></label>
+        <label class="row gap-3" style="padding:10px 0;border-top:1px solid var(--rule-faint)">
+          <input type="checkbox" checked><span class="col"><b class="tiny">Reduce motion</b>
+            <span class="tiny muted">Follows your system setting. Overriding here applies to this device only.</span></span></label>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Exchange rates</h2></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Automatic daily rates</span><span class="txn__meta"><span>Last fetched today 04:00 UTC · 168 currencies</span></span></span>
+  <span class="txn__amount">On</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-secondary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12"/><path d="m3 9 3-5 3 5a3 3 0 0 1-6 0Z"/><path d="m15 9 3-5 3 5a3 3 0 0 1-6 0Z"/></svg></span>
+  <span class="txn__body"><span class="txn__name">EUR → USD</span><span class="txn__meta"><span>Historical rate on the transaction date is always used</span></span></span>
+  <span class="txn__amount">1.0821</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-secondary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12"/><path d="m3 9 3-5 3 5a3 3 0 0 1-6 0Z"/><path d="m15 9 3-5 3 5a3 3 0 0 1-6 0Z"/></svg></span>
+  <span class="txn__body"><span class="txn__name">JPY → USD</span><span class="txn__meta"><span>Historical rate on the transaction date is always used</span></span></span>
+  <span class="txn__amount">0.00677</span>
+</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Security</h2></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Google — webmakers3bd@gmail.com</span><span class="txn__meta"><span>Primary sign-in method · connected Mar 2024</span></span></span>
+  <span class="txn__amount">Connected</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-secondary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Password</span><span class="txn__meta"><span>Set 4 Sep 2025 · used as a fallback</span></span></span>
+  <span class="txn__amount">Change</span>
+</a>
+    </div>
+    <div class="panel mt-3">
+      <div class="panel__head"><h3 class="panel__title">Active sessions</h3><button class="panel__action" style="background:none;border:0;cursor:pointer;color:var(--danger)">Sign out everywhere</button></div>
+      
+      <div class="row gap-3" style="padding:12px 16px;border-top:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Chrome · Windows 11</b>
+          <span class="tiny muted">New York, US · 74.12.•••.••• · Current session</span></div>
+        <span class="badge badge--in">This device</span>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-top:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Safari · iPhone 15</b>
+          <span class="tiny muted">New York, US · 74.12.•••.••• · Active 2 hours ago</span></div>
+        <button class="btn btn--sm btn--ghost" style="color:var(--danger)">Revoke</button>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-top:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Firefox · macOS</b>
+          <span class="tiny muted">Dhaka, BD · 103.84.•••.••• · Last used 12 Sep</span></div>
+        <button class="btn btn--sm btn--ghost" style="color:var(--danger)">Revoke</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">AI &amp; data</h2></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span>
+  <span class="txn__body"><span class="txn__name">AI assistant</span><span class="txn__meta"><span>Claude can read your financial data to answer questions</span></span></span>
+  <span class="txn__amount">On</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Automatic AI categorisation</span><span class="txn__meta"><span>New transactions are categorised on import</span></span></span>
+  <span class="txn__amount">On</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-tertiary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">AI mutations without confirmation</span><span class="txn__meta"><span>Off — every change the assistant proposes asks you first</span></span></span>
+  <span class="txn__amount">Off</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-secondary)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Export everything</span><span class="txn__meta"><span>JSON or CSV archive of all your data</span></span></span>
+  <span class="txn__amount">Request</span>
+</a>
+    </div>
+    <div class="panel mt-3" style="border-color:color-mix(in oklab, var(--danger) 30%, transparent)">
+      <div class="panel__head"><h3 class="panel__title" style="color:var(--danger)">Danger zone</h3></div>
+      <div class="panel__body">
+        <p class="tiny secondary">Deleting your account removes every transaction, account, receipt and conversation. Export first — this cannot be undone, and we keep nothing after 30 days.</p>
+        <button class="btn btn--sm btn--danger mt-3">Delete account</button>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("settings", { chrome: true });</script>
+</body>
+</html>

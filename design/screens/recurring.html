@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recurring · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Recurring</span>
+    <span class="appbar__sub">12 schedules · next in 2 days</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Schedule</button>
+</header>
+<main class="main">
+<div class="container">
+  <div class="callout mt-4" callout--info"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div>SpendTrack detected <b>2 new recurring patterns</b> from your transaction history. <a href="#" style="text-decoration:underline">Review suggestions</a></div></div>
+
+  <div class="chiprow" style="padding-inline:0">
+    <button class="chip" aria-pressed="true">All</button>
+    <button class="chip">Expenses</button>
+    <button class="chip">Income</button>
+    <button class="chip">Transfers</button>
+    <button class="chip">Paused <span class="badge">2</span></button>
+  </div>
+
+  <section class="section">
+    <div class="panel">
+      
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Salary · Northwind Labs</span>
+          <span class="txn__meta"><span>Monthly on the last weekday</span><span>Next 30 Sep</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Monthly on the last weekday</span>
+        <span class="txn__col hide-mobile">Next 30 Sep</span>
+        <span class="txn__amount txn__amount--in">
+          <span class="num ">+<span class="num__cur">$</span>3,210<span class="num__frac">.00</span></span><small>fixed</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-4)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Rent · 214 Bergen St</span>
+          <span class="txn__meta"><span>Monthly on the 1st</span><span>Next 01 Oct</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Monthly on the 1st</span>
+        <span class="txn__col hide-mobile">Next 01 Oct</span>
+        <span class="txn__amount ">
+          <span class="num ">−<span class="num__cur">$</span>1,650<span class="num__frac">.00</span></span><small>fixed</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">To Emergency Fund</span>
+          <span class="txn__meta"><span>Biweekly on Friday</span><span>Next 26 Sep</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Biweekly on Friday</span>
+        <span class="txn__col hide-mobile">Next 26 Sep</span>
+        <span class="txn__amount txn__amount--xfer">
+          <span class="num "><span class="num__cur">$</span>250<span class="num__frac">.00</span></span><small>fixed</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-6)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Con Edison</span>
+          <span class="txn__meta"><span>Monthly on the 22nd</span><span>Next 22 Sep</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Monthly on the 22nd</span>
+        <span class="txn__col hide-mobile">Next 22 Sep</span>
+        <span class="txn__amount ">
+          <span class="num ">−<span class="num__cur">$</span>112<span class="num__frac">.00</span></span><small>variable</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-2)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Auto loan · Toyota</span>
+          <span class="txn__meta"><span>Monthly on the 24th</span><span>Next 24 Sep</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Monthly on the 24th</span>
+        <span class="txn__col hide-mobile">Next 24 Sep</span>
+        <span class="txn__amount ">
+          <span class="num ">−<span class="num__cur">$</span>384<span class="num__frac">.22</span></span><small>fixed</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Freelance retainer · Vireo</span>
+          <span class="txn__meta"><span>Monthly on the 16th</span><span>Next 16 Oct</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Monthly on the 16th</span>
+        <span class="txn__col hide-mobile">Next 16 Oct</span>
+        <span class="txn__amount txn__amount--in">
+          <span class="num ">+<span class="num__cur">$</span>3,200<span class="num__frac">.00</span></span><small>variable</small></span>
+      </a>
+      <a class="txn" href="#">
+        <span class="txn__icon" style="--cat:var(--cat-4)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="txn__body">
+          <span class="txn__name">Cleaning service</span>
+          <span class="txn__meta"><span>Every 2 weeks on Thursday</span><span>Next 25 Sep</span></span>
+        </span>
+        <span class="txn__col hide-mobile">Every 2 weeks on Thursday</span>
+        <span class="txn__col hide-mobile">Next 25 Sep</span>
+        <span class="txn__amount ">
+          <span class="num ">−<span class="num__cur">$</span>140<span class="num__frac">.00</span></span><small>fixed</small></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Paused</h2></div>
+    <div class="panel" style="opacity:.62">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Storage unit</span><span class="txn__meta"><span>Monthly on the 5th · paused 12 Aug</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>85<span class="num__frac">.00</span></span><small>paused</small></span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--cat-9)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Language tutor</span><span class="txn__meta"><span>Weekly on Tuesday · paused 01 Sep</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>60<span class="num__frac">.00</span></span><small>paused</small></span>
+</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Schedule editor</h2><span class="section__meta">Preview</span></div>
+    <div class="panel"><div class="panel__body" style="padding-top:16px">
+      <div class="col gap-3">
+        <label class="field"><span class="field__label">Frequency</span>
+          <div class="row gap-2" style="flex-wrap:wrap">
+            <button class="chip">Daily</button><button class="chip">Weekly</button><button class="chip">Biweekly</button><button class="chip" aria-pressed="true">Monthly</button><button class="chip">Quarterly</button><button class="chip">Yearly</button><button class="chip">Custom</button>
+          </div></label>
+        <div class="grid-2">
+          <label class="field"><span class="field__label">Day of month</span><input class="input input--num" value="24"></label>
+          <label class="field"><span class="field__label">If weekend</span>
+            <select class="input"><option>Move to previous weekday</option><option>Move to next weekday</option><option>Keep the date</option></select></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span class="field__label">Starts</span><input class="input input--num" type="date" value="2024-03-24"></label>
+          <label class="field"><span class="field__label">Ends</span><input class="input input--num" type="date" value="2028-05-24"></label>
+        </div>
+        <label class="field"><span class="field__label">Amount behaviour</span>
+          <div class="row gap-2"><button class="chip" aria-pressed="true">Fixed $384.22</button><button class="chip">Variable · estimate from history</button></div></label>
+        <div class="callout callout--info"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div>Next 3 runs: <b>24 Sep</b>, <b>24 Oct</b>, <b>24 Nov</b>. Created 2 days ahead as pending so you can adjust before they post.</div></div>
+      </div>
+    </div></div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("recurring", { chrome: true });</script>
+</body>
+</html>

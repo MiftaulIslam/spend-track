@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI assistant · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Assistant</span>
+    <span class="appbar__sub">Claude · grounded on your data</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--ghost"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4.5l3 1.8"/></svg> History</button><button class="btn btn--sm btn--ghost"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> New</button>
+</header>
+<main class="main" style="padding-bottom:180px">
+<div class="container" style="max-width:760px">
+
+  <div class="ai-msg ai-msg--user">
+    <span class="ai-msg__avatar">MI</span>
+    <div class="ai-msg__body">How much did I spend on food last month compared to my budget, and which restaurants drove it?</div>
+  </div>
+
+  <div class="ai-msg ai-msg--ai">
+    <span class="ai-msg__avatar">C</span>
+    <div class="ai-msg__body">
+      <!-- Tool calls are visible, not hidden. The user can audit exactly which
+           data the model was given and re-run the query themselves. -->
+      <div class="ai-tool">
+        <div class="ai-tool__head"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><span class="ai-tool__name">search_transactions</span>
+          <span class="ai-tool__status badge badge--in"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg> 64 rows · 82 ms</span></div>
+        <div class="ai-tool__body num muted" style="font-size:var(--text-2xs)">{ dateFrom: "2025-08-01", dateTo: "2025-08-31", categories: ["dining-out","coffee-shops","groceries"], type: "EXPENSE" }</div>
+      </div>
+      <div class="ai-tool">
+        <div class="ai-tool__head"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg><span class="ai-tool__name">search_budgets</span>
+          <span class="ai-tool__status badge badge--in"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg> 3 rows · 31 ms</span></div>
+        <div class="ai-tool__body num muted" style="font-size:var(--text-2xs)">{ period: "2025-08", categories: ["dining-out","groceries"] }</div>
+      </div>
+
+      <p class="mt-3">In August you spent <b><span class="num "><span class="num__cur">$</span>1,180<span class="num__frac">.44</span></span></b> across food categories against a combined budget of
+        <b>$880.00</b> — <b style="color:var(--outflow)">$300.44 over</b>.
+        Dining out was the whole overage; groceries came in $71.01 under.</p>
+
+      <div class="panel mt-3">
+        <table class="table">
+          <thead><tr><th>Restaurant</th><th class="n">Visits</th><th class="n">Total</th></tr></thead>
+          <tbody>
+            <tr><td>Lilia</td><td class="n">2</td><td class="n"><span class="num "><span class="num__cur">$</span>248<span class="num__frac">.00</span></span></td></tr>
+            <tr><td>Di An Di</td><td class="n">3</td><td class="n"><span class="num "><span class="num__cur">$</span>186<span class="num__frac">.50</span></span></td></tr>
+            <tr><td>Blue Bottle Coffee</td><td class="n">18</td><td class="n"><span class="num "><span class="num__cur">$</span>121<span class="num__frac">.50</span></span></td></tr>
+            <tr><td>Everything else</td><td class="n">22</td><td class="n"><span class="num "><span class="num__cur">$</span>232<span class="num__frac">.44</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3">Three weekend dinners account for 58% of the dining overage. Your July dining
+        total was $291.20, so August was an outlier rather than a trend.</p>
+      <div class="row gap-2 mt-3" style="flex-wrap:wrap">
+        <button class="chip">Show those transactions</button>
+        <button class="chip">Compare to last 6 months</button>
+        <button class="chip">Raise the dining budget</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-msg ai-msg--user">
+    <span class="ai-msg__avatar">MI</span>
+    <div class="ai-msg__body">Raise my dining budget to $340 starting October.</div>
+  </div>
+
+  <!-- Every mutation stops here. The model proposes; the person commits. -->
+  <div class="ai-msg ai-msg--ai">
+    <span class="ai-msg__avatar">C</span>
+    <div class="ai-msg__body">
+      <p>Here's the change I'd make. Nothing is saved until you confirm.</p>
+      <div class="ai-confirm">
+        <div class="ai-confirm__title"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg> Confirm budget change</div>
+        <dl class="ai-confirm__rows">
+          <div class="ai-confirm__row"><dt>Budget</dt><dd>Dining out · monthly</dd></div>
+          <div class="ai-confirm__row"><dt>Current</dt><dd class="num"><span class="num "><span class="num__cur">$</span>280<span class="num__frac">.00</span></span></dd></div>
+          <div class="ai-confirm__row"><dt>New</dt><dd class="num"><span class="num "><span class="num__cur">$</span>340<span class="num__frac">.00</span></span></dd></div>
+          <div class="ai-confirm__row"><dt>Effective</dt><dd>1 October 2025 · future periods only</dd></div>
+          <div class="ai-confirm__row"><dt>Impact</dt><dd>Overall monthly budget rises to $5,260.00</dd></div>
+        </dl>
+        <div class="ai-confirm__actions">
+          <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg> Apply change</button>
+          <button class="btn btn--sm btn--secondary">Edit first</button>
+          <button class="btn btn--sm btn--ghost">Cancel</button>
+        </div>
+      </div>
+      <p class="tiny muted mt-2">Applied through the normal budget service with your permissions — the model never writes to the database directly.</p>
+    </div>
+  </div>
+
+  <div class="ai-msg ai-msg--ai">
+    <span class="ai-msg__avatar">C</span>
+    <div class="ai-msg__body"><span class="typing"><i></i><i></i><i></i></span></div>
+  </div>
+</div>
+</main>
+
+<div style="position:fixed;bottom:calc(var(--tabbar-h) + var(--safe-bottom));inset-inline:0;z-index:30;background:linear-gradient(to top, var(--paper) 60%, transparent);padding:16px">
+  <div class="container" style="max-width:760px;padding-inline:0">
+    <div class="row gap-2 mb-2" style="overflow-x:auto;scrollbar-width:none">
+      <button class="chip">What can I cut?</button>
+      <button class="chip">Am I on track for Japan?</button>
+      <button class="chip">Log $12 lunch on Amex</button>
+      <button class="chip">Any unusual charges?</button>
+    </div>
+    <div class="row gap-2" style="background:var(--surface);border:1px solid var(--rule-strong);border-radius:var(--radius-lg);padding:6px 6px 6px 14px">
+      <input class="input" style="border:0;background:none;height:36px;padding:0" placeholder="Ask about your money…">
+      <button class="btn btn--icon btn--ghost" aria-label="Attach receipt"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg></button>
+      <button class="btn btn--icon btn--primary" aria-label="Send"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <p class="tiny muted mt-2" style="text-align:center">Read-only answers run immediately. Anything that changes your data asks first.</p>
+  </div>
+</div>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("assistant", { chrome: true });</script>
+</body>
+</html>

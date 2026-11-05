@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lending · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Lending</span>
+    <span class="appbar__sub">$310 owed to you · $0 owed by you</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Record</button>
+</header>
+<main class="main">
+<div class="container">
+  <div class="statgrid mt-4">
+    <div class="stat"><span class="stat__label">Owed to you</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>310<span class="num__frac">.00</span></span></span><span class="stat__delta stat__delta--up">3 people</span></div>
+    <div class="stat"><span class="stat__label">You owe</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>0<span class="num__frac">.00</span></span></span><span class="stat__delta ">settled</span></div>
+    <div class="stat"><span class="stat__label">Written off</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>45<span class="num__frac">.00</span></span></span><span class="stat__delta ">1 record</span></div>
+    <div class="stat"><span class="stat__label">Settled this year</span><span class="stat__value"><span class="num "><span class="num__cur">$</span>1,284<span class="num__frac">.00</span></span></span><span class="stat__delta ">9 records</span></div>
+  </div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Owed to you</h2></div>
+    <div class="panel">
+      
+      <div class="budget-row">
+        <div class="budget-row__top">
+          <span class="txn__icon" style="--cat:var(--cat-1);width:28px;height:28px;font-size:11px">AR</span>
+          <span class="budget-row__name">Ayesha R.</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>90<span class="num__frac">.00</span></span></b> <span>outstanding</span></span>
+        </div>
+        
+        <div class="budget-row__foot"><span>Dinner at Lilia · 15 Sep · reminded once</span><span><button class="chip" style="height:22px">Record repayment</button></span></div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-row__top">
+          <span class="txn__icon" style="--cat:var(--cat-5);width:28px;height:28px;font-size:11px">DM</span>
+          <span class="budget-row__name">Dan M.</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>100<span class="num__frac">.00</span></span></b> <span>outstanding</span></span>
+        </div>
+        
+<div class="meter meter--ok">
+  <div class="meter__fill" style="width:54%"></div>
+  
+</div>
+        <div class="budget-row__foot"><span>Concert tickets · 02 Aug · $120 of $220 repaid</span><span><button class="chip" style="height:22px">Record repayment</button></span></div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-row__top">
+          <span class="txn__icon" style="--cat:var(--cat-11);width:28px;height:28px;font-size:11px">PS</span>
+          <span class="budget-row__name">Priya S.</span>
+          <span class="budget-row__amt"><b><span class="num "><span class="num__cur">$</span>120<span class="num__frac">.00</span></span></b> <span>outstanding</span></span>
+        </div>
+        
+        <div class="budget-row__foot"><span>Flight split · 14 Jun · no repayments</span><span><button class="chip" style="height:22px">Record repayment</button></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">You owe</h2></div>
+    <div class="panel">
+      
+<div class="empty">
+  <div class="empty__art"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.9-3.9a2 2 0 0 1 0-2.8l.6-.6"/><path d="M8 7 5.4 9.6a2 2 0 0 0 0 2.8l3.4 3.4"/><path d="M3 12 9 6l3 3"/></svg></div>
+  <div class="empty__title">Nothing outstanding</div>
+  <p class="empty__body">When you borrow money, record it here and repayments will post automatically against the right account.</p>
+  <button class="btn btn--secondary btn--sm mt-2">Record borrowing</button>
+</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Settled</h2><span class="section__meta">Last 90 days</span></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)">TK</span>
+  <span class="txn__body"><span class="txn__name">Tomas K.</span><span class="txn__meta"><span>Dinner at Lilia · settled via Venmo 16 Sep</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>90<span class="num__frac">.00</span></span><small>settled</small></span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--inflow)">JL</span>
+  <span class="txn__body"><span class="txn__name">Jenny L.</span><span class="txn__meta"><span>Gift split · settled in cash 04 Sep</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>60<span class="num__frac">.00</span></span><small>settled</small></span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--ink-tertiary)">RB</span>
+  <span class="txn__body"><span class="txn__name">Rafi B.</span><span class="txn__meta"><span>Written off 12 Aug · marked uncollectable</span></span></span>
+  <span class="txn__amount"><span class="num "><span class="num__cur">$</span>45<span class="num__frac">.00</span></span><small>written off</small></span>
+</a>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("lending", { chrome: true });</script>
+</body>
+</html>

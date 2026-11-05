@@ -1,0 +1,249 @@
+/* ============================================================================
+   SpendTrack — Design Tokens
+   ----------------------------------------------------------------------------
+   Visual world: "Ledger Instrument"
+   Warm paper canvas, ink typography, hairline rules instead of card soup,
+   monospace tabular numerals as the hero, brass used as a scarce signal.
+
+   This file is the single source of truth. The Next.js app re-declares these
+   exact values in app/globals.css via Tailwind v4 @theme.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Canvas & surfaces -------------------------------------------------
+     Never pure white. Paper has warmth; it makes ink look like ink. */
+  --paper:            #FBFAF8;  /* app canvas                                */
+  --surface:          #FFFFFF;  /* raised sheet / table body                 */
+  --surface-sunken:   #F4F2EE;  /* wells, inputs, skeleton troughs           */
+  --surface-inverse:  #14140F;  /* inverted chips, tooltips                  */
+  --overlay:          rgba(20, 20, 15, 0.42);
+
+  /* ---- Ink ---------------------------------------------------------------
+     Warm near-black. #000 is a screen artifact, not a colour.               */
+  --ink:              #171614;  /* primary text, numerals                    */
+  --ink-secondary:    #63605A;  /* labels, supporting copy                   */
+  --ink-tertiary:     #93908A;  /* meta, timestamps, placeholders            */
+  --ink-inverse:      #FBFAF8;
+  --ink-disabled:     #B7B3AC;
+
+  /* ---- Rules -------------------------------------------------------------
+     Structure comes from hairlines, not shadows.                            */
+  --rule:             rgba(23, 22, 20, 0.09);
+  --rule-strong:      rgba(23, 22, 20, 0.16);
+  --rule-faint:       rgba(23, 22, 20, 0.05);
+
+  /* ---- Brass (brand accent) ---------------------------------------------
+     Scarce by policy: wordmark, focus ring, active nav indicator, one
+     highlighted datum per view. Never a background for a whole section.     */
+  --brass:            #A9762C;
+  --brass-bright:     #C79246;
+  --brass-deep:       #7C561F;
+  --brass-wash:       #F6EEE0;
+  --brass-rule:       rgba(169, 118, 44, 0.32);
+
+  /* ---- Money semantics ---------------------------------------------------
+     Direction of money is the most important signal in the product.
+     Inflow = moss. Outflow = clay. Transfer = slate. Never red/green candy. */
+  --inflow:           #1F6B4A;
+  --inflow-wash:      #E7F1EB;
+  --inflow-rule:      rgba(31, 107, 74, 0.28);
+
+  --outflow:          #A64328;
+  --outflow-wash:     #F8EBE6;
+  --outflow-rule:     rgba(166, 67, 40, 0.26);
+
+  --transfer:         #41527F;
+  --transfer-wash:    #EAEDF5;
+  --transfer-rule:    rgba(65, 82, 127, 0.26);
+
+  /* ---- Status ------------------------------------------------------------ */
+  --positive:         #1F6B4A;
+  --warning:          #96700E;
+  --warning-wash:     #FAF1D8;
+  --danger:           #A32F2B;
+  --danger-wash:      #FAE9E8;
+  --info:             #2C5E7A;
+  --info-wash:        #E5EFF4;
+  --neutral-wash:     #F0EEEA;
+
+  /* ---- Category palette --------------------------------------------------
+     Desaturated, warm-biased. Readable as 12px dots and as 40px tiles.      */
+  --cat-1:  #A64328;  /* food & dining   */
+  --cat-2:  #41527F;  /* transport       */
+  --cat-3:  #1F6B4A;  /* groceries       */
+  --cat-4:  #7C561F;  /* housing         */
+  --cat-5:  #6B4577;  /* entertainment   */
+  --cat-6:  #2C5E7A;  /* utilities       */
+  --cat-7:  #8A5340;  /* shopping        */
+  --cat-8:  #4A6B2E;  /* health          */
+  --cat-9:  #96700E;  /* education       */
+  --cat-10: #7A3350;  /* personal care   */
+  --cat-11: #3D6560;  /* travel          */
+  --cat-12: #5A5A64;  /* other           */
+
+  /* ---- Typography --------------------------------------------------------
+     Two families in-app. Sans carries language, mono carries quantity.
+     A serif appears only on marketing and auth surfaces.                    */
+  --font-sans: "Geist", ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", monospace;
+  --font-serif: "Instrument Serif", "Lyon Text", Georgia, serif;
+
+  /* Scale — 1.2 minor third, clamped for mobile-first legibility */
+  --text-2xs:   0.6875rem;  /* 11px  — table meta, badge text               */
+  --text-xs:    0.75rem;    /* 12px  — labels, captions                     */
+  --text-sm:    0.8125rem;  /* 13px  — dense table body                     */
+  --text-base:  0.9375rem;  /* 15px  — body (mobile default)                */
+  --text-md:    1.0625rem;  /* 17px  — list primary                         */
+  --text-lg:    1.3125rem;  /* 21px  — section title                        */
+  --text-xl:    1.625rem;   /* 26px  — page title                           */
+  --text-2xl:   2.125rem;   /* 34px  — balance display                      */
+  --text-3xl:   2.875rem;   /* 46px  — hero figure                          */
+
+  --tracking-tight:  -0.022em;
+  --tracking-snug:   -0.012em;
+  --tracking-normal: 0;
+  --tracking-wide:    0.06em;   /* uppercase eyebrows only */
+
+  --leading-tight: 1.15;
+  --leading-snug:  1.35;
+  --leading-body:  1.55;
+
+  /* ---- Space — 4pt base, 8pt rhythm ------------------------------------- */
+  --space-0:  0;
+  --space-1:  0.25rem;   /*  4 */
+  --space-2:  0.5rem;    /*  8 */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.25rem;   /* 20 */
+  --space-6:  1.5rem;    /* 24 */
+  --space-8:  2rem;      /* 32 */
+  --space-10: 2.5rem;    /* 40 */
+  --space-12: 3rem;      /* 48 */
+  --space-16: 4rem;      /* 64 */
+  --space-20: 5rem;      /* 80 */
+
+  /* ---- Radius — crisp, never pill on containers ------------------------- */
+  --radius-xs: 3px;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 999px;   /* dots, avatars, small tags only */
+
+  /* ---- Elevation — restraint. Depth is a sheet, not a card. ------------- */
+  --shadow-hairline: 0 1px 0 0 var(--rule-faint);
+  --shadow-raised:   0 1px 2px rgba(23, 22, 20, 0.05), 0 0 0 1px var(--rule-faint);
+  --shadow-popover:  0 8px 24px -6px rgba(23, 22, 20, 0.14), 0 2px 6px rgba(23, 22, 20, 0.06), 0 0 0 1px var(--rule);
+  --shadow-sheet:    0 -12px 40px -12px rgba(23, 22, 20, 0.22), 0 0 0 1px var(--rule);
+  --shadow-modal:    0 24px 64px -16px rgba(23, 22, 20, 0.28), 0 0 0 1px var(--rule);
+
+  /* ---- Motion ------------------------------------------------------------
+     Readouts settle, they do not bounce. Sheets use an iOS-grade ease.      */
+  --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-sheet:   cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-spring:  linear(0, 0.402 7.4%, 0.987 21.6%, 1.059, 1.084 29.4%, 1.07, 1.031 40.5%, 0.993 52.3%, 1.002 75.4%, 1);
+
+  --dur-instant: 90ms;
+  --dur-fast:    150ms;
+  --dur-base:    220ms;
+  --dur-slow:    320ms;
+  --dur-sheet:   420ms;
+  --dur-chart:   640ms;
+
+  --stagger: 24ms;
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --rail-w:       248px;   /* desktop sidebar            */
+  --rail-w-collapsed: 64px;
+  --appbar-h:     56px;
+  --tabbar-h:     60px;
+  --content-max:  1320px;
+  --reading-max:  68ch;
+  --safe-bottom:  env(safe-area-inset-bottom, 0px);
+
+  /* ---- Focus ------------------------------------------------------------- */
+  --focus-ring: 0 0 0 2px var(--paper), 0 0 0 4px var(--brass);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper:            #111110;
+  --surface:          #1A1A18;
+  --surface-sunken:   #0B0B0A;
+  --surface-inverse:  #F3F1EC;
+  --overlay:          rgba(5, 5, 4, 0.66);
+
+  --ink:              #F1EFE9;
+  --ink-secondary:    #A5A199;
+  --ink-tertiary:     #75716A;
+  --ink-inverse:      #14140F;
+  --ink-disabled:     #56534D;
+
+  --rule:             rgba(241, 239, 233, 0.12);
+  --rule-strong:      rgba(241, 239, 233, 0.22);
+  --rule-faint:       rgba(241, 239, 233, 0.07);
+
+  --brass:            #D7A458;
+  --brass-bright:     #EBBE77;
+  --brass-deep:       #A9762C;
+  --brass-wash:       rgba(215, 164, 88, 0.12);
+  --brass-rule:       rgba(215, 164, 88, 0.34);
+
+  --inflow:           #58BE8C;
+  --inflow-wash:      rgba(88, 190, 140, 0.12);
+  --inflow-rule:      rgba(88, 190, 140, 0.30);
+
+  --outflow:          #E08160;
+  --outflow-wash:     rgba(224, 129, 96, 0.12);
+  --outflow-rule:     rgba(224, 129, 96, 0.30);
+
+  --transfer:         #8FA3D6;
+  --transfer-wash:    rgba(143, 163, 214, 0.12);
+  --transfer-rule:    rgba(143, 163, 214, 0.30);
+
+  --positive:         #58BE8C;
+  --warning:          #D8AC44;
+  --warning-wash:     rgba(216, 172, 68, 0.13);
+  --danger:           #E2706B;
+  --danger-wash:      rgba(226, 112, 107, 0.13);
+  --info:             #74AECB;
+  --info-wash:        rgba(116, 174, 203, 0.13);
+  --neutral-wash:     rgba(241, 239, 233, 0.07);
+
+  --cat-1:  #E08160;
+  --cat-2:  #8FA3D6;
+  --cat-3:  #58BE8C;
+  --cat-4:  #D7A458;
+  --cat-5:  #B48CC0;
+  --cat-6:  #74AECB;
+  --cat-7:  #CE9A85;
+  --cat-8:  #9FC072;
+  --cat-9:  #D8AC44;
+  --cat-10: #CB8AA3;
+  --cat-11: #7FB3AC;
+  --cat-12: #A3A3AC;
+
+  --shadow-hairline: 0 1px 0 0 var(--rule-faint);
+  --shadow-raised:   0 1px 2px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--rule-faint);
+  --shadow-popover:  0 8px 24px -6px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--rule);
+  --shadow-sheet:    0 -12px 40px -12px rgba(0, 0, 0, 0.72), 0 0 0 1px var(--rule);
+  --shadow-modal:    0 24px 64px -16px rgba(0, 0, 0, 0.78), 0 0 0 1px var(--rule);
+
+  --focus-ring: 0 0 0 2px var(--paper), 0 0 0 4px var(--brass);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 1ms;
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+    --dur-sheet: 1ms;
+    --dur-chart: 1ms;
+    --stagger: 0ms;
+  }
+}

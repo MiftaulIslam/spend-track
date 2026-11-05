@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Merchants · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Merchants</span>
+    <span class="appbar__sub">218 known · 12 unmatched</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--primary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Merchant</button>
+</header>
+<main class="main">
+<div class="container">
+  <div class="callout mt-4" callout--warn"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg><div><b>12 transactions</b> have raw descriptors that don't match a known merchant. <a href="#" style="text-decoration:underline">Review and map</a></div></div>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Needs mapping</h2></div>
+    <div class="panel">
+      
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="col grow" style="min-width:0">
+          <span class="num" style="font-size:var(--text-sm)">SQ *DI AN DI BROOKLYN</span>
+          <span class="tiny muted">Suggested: Di An Di · Restaurants · 92% confidence</span></span>
+        <button class="btn btn--sm btn--primary">Accept</button>
+        <button class="btn btn--sm btn--ghost">Change</button>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="col grow" style="min-width:0">
+          <span class="num" style="font-size:var(--text-sm)">TST* BLUE BOTTLE 0412</span>
+          <span class="tiny muted">Suggested: Blue Bottle Coffee · Coffee shops · 97% confidence</span></span>
+        <button class="btn btn--sm btn--primary">Accept</button>
+        <button class="btn btn--sm btn--ghost">Change</button>
+      </div>
+      <div class="row gap-3" style="padding:12px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="col grow" style="min-width:0">
+          <span class="num" style="font-size:var(--text-sm)">AMZN MKTP US*2K41Z</span>
+          <span class="tiny muted">Suggested: Amazon · Shopping · 89% confidence</span></span>
+        <button class="btn btn--sm btn--primary">Accept</button>
+        <button class="btn btn--sm btn--ghost">Change</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">All merchants</h2><span class="section__meta">Sorted by spend</span></div>
+    <div class="panel">
+      <table class="table">
+        <thead><tr><th>Merchant</th><th>Default category</th><th class="n">Txns</th><th class="n">This year</th><th class="n">Last seen</th></tr></thead>
+        <tbody>
+          
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-3)"></span>Whole Foods Market</span></td>
+            <td class="muted">Supermarket</td><td class="n">68</td><td class="n"><span class="num "><span class="num__cur">$</span>4,218<span class="num__frac">.40</span></span></td><td class="n muted">17 Sep</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-8)"></span>Equinox</span></td>
+            <td class="muted">Health</td><td class="n">9</td><td class="n"><span class="num "><span class="num__cur">$</span>1,935<span class="num__frac">.00</span></span></td><td class="n muted">28 Aug</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-7)"></span>Amazon</span></td>
+            <td class="muted">Shopping</td><td class="n">41</td><td class="n"><span class="num "><span class="num__cur">$</span>1,682<span class="num__frac">.33</span></span></td><td class="n muted">14 Sep</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-2)"></span>Uber</span></td>
+            <td class="muted">Rideshare</td><td class="n">94</td><td class="n"><span class="num "><span class="num__cur">$</span>1,104<span class="num__frac">.60</span></span></td><td class="n muted">17 Sep</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-1)"></span>Blue Bottle Coffee</span></td>
+            <td class="muted">Coffee shops</td><td class="n">121</td><td class="n"><span class="num "><span class="num__cur">$</span>812<span class="num__frac">.75</span></span></td><td class="n muted">17 Sep</td></tr>
+          <tr><td><span class="row gap-2"><span class="chip__dot" style="--cat:var(--cat-6)"></span>Con Edison</span></td>
+            <td class="muted">Utilities</td><td class="n">12</td><td class="n"><span class="num "><span class="num__cur">$</span>1,284<span class="num__frac">.00</span></span></td><td class="n muted">15 Sep</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("merchants", { chrome: true });</script>
+</body>
+</html>

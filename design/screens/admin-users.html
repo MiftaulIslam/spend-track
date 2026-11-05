@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin · Users · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+<div class="row gap-2" style="padding:7px 16px;background:var(--surface-inverse);color:var(--ink-inverse);font-size:var(--text-2xs)">
+  <svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><b>Platform administration</b>
+  <span style="opacity:.7">·  acting as qa.admin@spendtrack.test · every action here is audited</span>
+  <span class="grow"></span><a href="../screens/dashboard.html" style="color:var(--brass-bright)">Leave admin</a>
+</div>
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Users</span>
+    <span class="appbar__sub">14,209 monthly active</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--sm btn--secondary"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Filter</button><button class="btn btn--sm btn--ghost"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg> Export</button>
+</header>
+
+<div class="chiprow" style="padding-inline:16px;border-bottom:1px solid var(--rule)">
+  <a class="chip" href="admin-overview.html">Overview</a><a class="chip" href="admin-users.html" aria-pressed="true">Users</a><a class="chip" href="admin-ai.html">AI</a><a class="chip" href="admin-system.html">System</a>
+  <a class="chip" href="audit.html">Audit</a>
+  <a class="chip" href="#">Feature flags</a>
+  <a class="chip" href="#">Config</a>
+</div>
+<main class="main">
+<div class="container">
+  <div class="callout mt-4" callout--info"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div>This directory shows account status and product usage only. Balances, transaction amounts, merchants, notes and attachments are <b>not readable by administrators</b> and are excluded from these queries at the repository layer.</div></div>
+
+  <div class="row gap-2 mt-4">
+    <input class="input" placeholder="Search by email or user ID…" style="flex:1">
+    <button class="btn btn--secondary">Search</button>
+  </div>
+
+  <section class="section">
+    <div class="panel" style="overflow-x:auto">
+      <table class="table">
+        <thead><tr><th>User</th><th>Status</th><th>Plan</th><th class="n">Txns</th><th class="n">AI reqs</th><th>Last active</th><th>Joined</th><th></th></tr></thead>
+        <tbody>
+          
+          <tr>
+            <td><div class="col"><span class="num tiny muted">a4f2···9c1</span><span>qa.owner@spendtrack.test</span></div></td>
+            <td><span class="badge badge--in">Active</span></td>
+            <td class="muted">Free</td><td class="n">4182</td><td class="n">412</td>
+            <td class="muted">2 min ago</td><td class="muted">12 Mar 2024</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+          <tr>
+            <td><div class="col"><span class="num tiny muted">b8e1···2d7</span><span>nadia.k@example.com</span></div></td>
+            <td><span class="badge badge--in">Active</span></td>
+            <td class="muted">Pro</td><td class="n">1284</td><td class="n">89</td>
+            <td class="muted">18 min ago</td><td class="muted">04 Jan 2025</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+          <tr>
+            <td><div class="col"><span class="num tiny muted">c9a3···7f4</span><span>dan.m@example.com</span></div></td>
+            <td><span class="badge badge--in">Active</span></td>
+            <td class="muted">Free</td><td class="n">612</td><td class="n">14</td>
+            <td class="muted">3 hours ago</td><td class="muted">22 Jun 2025</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+          <tr>
+            <td><div class="col"><span class="num tiny muted">d1b5···8a2</span><span>priya.s@example.com</span></div></td>
+            <td><span class="badge badge--warn">Suspended</span></td>
+            <td class="muted">Free</td><td class="n">84</td><td class="n">0</td>
+            <td class="muted">12 days ago</td><td class="muted">01 Sep 2025</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+          <tr>
+            <td><div class="col"><span class="num tiny muted">e7c2···3b9</span><span>tomas.k@example.com</span></div></td>
+            <td><span class="badge badge--in">Active</span></td>
+            <td class="muted">Pro</td><td class="n">2941</td><td class="n">204</td>
+            <td class="muted">Yesterday</td><td class="muted">18 Nov 2024</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+          <tr>
+            <td><div class="col"><span class="num tiny muted">f2d8···6e1</span><span>deleted-user</span></div></td>
+            <td><span class="badge ">Deleted</span></td>
+            <td class="muted">—</td><td class="n">—</td><td class="n">—</td>
+            <td class="muted">30 Aug 2025</td><td class="muted">09 Feb 2024</td>
+            <td style="text-align:right"><button class="btn btn--sm btn--ghost"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Signups &amp; retention</h2></div>
+    <div class="grid-auto">
+      <div class="panel"><div class="panel__head"><h3 class="panel__title">Daily signups</h3></div>
+        <div class="panel__body" style="padding-top:12px">
+          <div class="chart__bars"><div class="chart__bar" style="height:30.434782608695656%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:44.565217391304344%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:41.30434782608695%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:56.52173913043478%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:47.82608695652174%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:20.652173913043477%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:15.217391304347828%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:52.17391304347826%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:59.78260869565217%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:66.30434782608695%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:53.2608695652174%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:63.04347826086957%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:23.91304347826087%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:19.565217391304348%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:69.56521739130434%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:77.17391304347827%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:73.91304347826086%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:80.43478260869566%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:67.3913043478261%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:28.26086956521739%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:22.82608695652174%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:85.86956521739131%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:91.30434782608695%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:88.04347826086956%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:95.65217391304348%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:82.6086956521739%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:33.69565217391305%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:26.08695652173913%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:100%;--bar:var(--inflow)"></div><div class="chart__bar" style="height:91.30434782608695%;--bar:var(--inflow)"></div></div>
+          <div class="chart__axis"><span>18 Aug</span><span>01 Sep</span><span>17 Sep</span></div></div></div>
+      <div class="panel"><div class="panel__head"><h3 class="panel__title">Cohort retention</h3></div>
+        <div class="panel__body" style="padding-top:8px">
+          <table class="table">
+            <thead><tr><th>Cohort</th><th class="n">Size</th><th class="n">D1</th><th class="n">D7</th><th class="n">D30</th></tr></thead>
+            <tbody>
+              <tr><td>Sep 2025</td><td class="n">1284</td><td class="n">68%</td><td class="n">44%</td><td class="n">—</td></tr><tr><td>Aug 2025</td><td class="n">1088</td><td class="n">71%</td><td class="n">42.8%</td><td class="n">29.4%</td></tr><tr><td>Jul 2025</td><td class="n">942</td><td class="n">66%</td><td class="n">39%</td><td class="n">28.1%</td></tr><tr><td>Jun 2025</td><td class="n">810</td><td class="n">64%</td><td class="n">37%</td><td class="n">26.0%</td></tr>
+            </tbody></table></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head"><h2 class="section__title">Recent admin actions</h2></div>
+    <div class="panel">
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--warning)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Suspended d1b5···8a2</span><span class="txn__meta"><span>by qa.admin · reason: payment fraud report · 12 Sep 14:02</span></span></span>
+  <span class="txn__amount">Suspend</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--info)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Reset AI quota for b8e1···2d7</span><span class="txn__meta"><span>by qa.admin · support ticket #4821 · 11 Sep 09:31</span></span></span>
+  <span class="txn__amount">Quota</span>
+</a>
+      
+<a class="txn" href="#">
+  <span class="txn__icon" style="--cat:var(--transfer)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body"><span class="txn__name">Enabled flag ai_agent_beta for 5% of users</span><span class="txn__meta"><span>by qa.admin · 09 Sep 16:20</span></span></span>
+  <span class="txn__amount">Flag</span>
+</a>
+    </div>
+  </section>
+</div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("admin-users", { chrome: true });</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quick add · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+
+
+<div style="min-height:100dvh;background:var(--overlay);display:flex;align-items:flex-end;justify-content:center">
+<div class="sheet" style="position:static;animation:none;width:min(430px,100%);max-height:none;border-radius:16px 16px 0 0">
+  <div class="sheet__grip"></div>
+  <div class="sheet__head">
+    <button class="btn btn--icon btn--ghost" aria-label="Close"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <span class="sheet__title">New transaction</span>
+    <span class="appbar__spacer"></span>
+    <button class="btn btn--sm btn--ghost"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg> Scan</button>
+  </div>
+
+  <div class="sheet__body">
+    <div class="amountpad">
+      <div class="amountpad__dir" role="group" aria-label="Direction">
+        <button aria-pressed="true">Expense</button><button>Income</button><button>Transfer</button>
+      </div>
+      <div class="amountpad__value" style="color:var(--ink)">
+        <span class="amountpad__cur">$</span>24<span style="opacity:.5">.</span><span style="opacity:.5">50</span>
+        <span class="amountpad__caret"></span>
+      </div>
+      <span class="tiny muted">Amex Gold · USD</span>
+    </div>
+
+    <!-- Suggested category first. Learned from merchant + amount + time.
+         One tap lands you on "save" — the rest is progressive disclosure. -->
+    <div style="padding:0 16px 12px">
+      <div class="eyebrow mb-2">Category</div>
+      <div class="row gap-2" style="flex-wrap:wrap">
+        <button class="chip" aria-pressed="true"><span class="chip__dot" style="--cat:var(--cat-1)"></span>Dining out</button>
+        <button class="chip"><span class="chip__dot" style="--cat:var(--cat-3)"></span>Groceries</button>
+        <button class="chip"><span class="chip__dot" style="--cat:var(--cat-2)"></span>Transport</button>
+        <button class="chip"><span class="chip__dot" style="--cat:var(--cat-7)"></span>Shopping</button>
+        <button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> More</button>
+      </div>
+    </div>
+
+    <div style="padding:0 16px 12px">
+      <div class="eyebrow mb-2">Account</div>
+      <div class="row gap-2" style="flex-wrap:wrap">
+        <button class="chip" aria-pressed="true">Amex Gold ···4021</button>
+        <button class="chip">Chase Checking</button>
+        <button class="chip">Cash</button>
+      </div>
+    </div>
+
+    <details style="border-top:1px solid var(--rule);padding:12px 16px">
+      <summary style="cursor:pointer;font-size:var(--text-sm);font-weight:500;color:var(--ink-secondary)">More details</summary>
+      <div class="col gap-3 mt-3">
+        <label class="field"><span class="field__label">Merchant</span>
+          <input class="input" placeholder="Search merchants…" value="Lilia"></label>
+        <label class="field"><span class="field__label">Date</span>
+          <input class="input input--num" type="date" value="2025-09-17"></label>
+        <label class="field"><span class="field__label">Note</span>
+          <textarea class="input" placeholder="What was this for?"></textarea></label>
+        <div class="row gap-2"><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11V5a2 2 0 0 1 2-2h6l10 10-8 8z"/><circle cx="8" cy="8" r="1.4"/></svg> Add tag</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6"/><path d="M18 20a6.4 6.4 0 0 0-2-4.6"/></svg> Split</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg> Attach</button></div>
+      </div>
+    </details>
+
+    <div class="keypad">
+      <button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button>.</button><button>0</button>
+      <button aria-label="Delete last digit"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 5H9l-6 7 6 7h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1Z"/><path d="m18 9-6 6M12 9l6 6"/></svg></button>
+    </div>
+  </div>
+
+  <div class="sheet__foot">
+    <button class="btn btn--primary btn--lg btn--block">Save expense · <span class="num "><span class="num__cur">$</span>24<span class="num__frac">.50</span></span></button>
+    <p class="tiny muted mt-2" style="text-align:center">Saves to Amex Gold. <kbd>⌘↵</kbd> to save and add another.</p>
+  </div>
+</div>
+</div>
+
+<script src="../shell.js"></script>
+<script>mountShell("quick-add", { chrome: false });</script>
+</body>
+</html>

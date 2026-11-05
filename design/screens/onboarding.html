@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Onboarding · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+
+
+<div style="min-height:100dvh;display:flex;flex-direction:column">
+  <header class="appbar"><span class="brandmark__glyph">S</span>
+    <span class="appbar__title">Set up your ledger</span><span class="appbar__spacer"></span>
+    <button class="btn btn--sm btn--ghost">Skip for now</button></header>
+
+  <div style="height:2px;background:var(--surface-sunken)"><div style="height:100%;width:50%;background:var(--brass);transition:width var(--dur-slow) var(--ease-out)"></div></div>
+
+  <main class="main" style="padding-bottom:120px">
+  <div class="container" style="max-width:600px">
+    <div class="eyebrow mt-6">Step 2 of 4</div>
+    <h1 style="font-size:var(--text-xl);margin-top:8px">Where does your money live?</h1>
+    <p class="secondary mt-2" style="font-size:var(--text-sm);line-height:1.6">
+      Add the accounts you actually use. You can add more later, and nothing here connects to a bank —
+      you enter balances yourself or import a statement.</p>
+
+    <div class="panel mt-6">
+      
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--cat-6)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Chase Checking</b><span class="tiny muted">Checking · USD</span></div>
+        <span class="num" style="font-size:var(--text-sm);color:var(--ink)"><span class="num "><span class="num__cur">$</span>8,240<span class="num__frac">.12</span></span></span>
+        <button class="btn btn--icon btn--ghost" aria-label="Remove"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Ally Savings</b><span class="tiny muted">Savings · 4.20% APY</span></div>
+        <span class="num" style="font-size:var(--text-sm);color:var(--ink)"><span class="num "><span class="num__cur">$</span>2,600<span class="num__frac">.43</span></span></span>
+        <button class="btn btn--icon btn--ghost" aria-label="Remove"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="row gap-3" style="padding:13px 16px;border-bottom:1px solid var(--rule-faint)">
+        <span class="txn__icon" style="--cat:var(--cat-1)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+        <div class="col grow" style="min-width:0"><b style="font-size:var(--text-sm)">Amex Gold</b><span class="tiny muted">Credit card · $10,000 limit</span></div>
+        <span class="num" style="font-size:var(--text-sm);color:var(--outflow)"><span class="num ">−<span class="num__cur">$</span>2,860<span class="num__frac">.40</span></span></span>
+        <button class="btn btn--icon btn--ghost" aria-label="Remove"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div style="padding:12px 16px">
+        <div class="row gap-2" style="flex-wrap:wrap">
+          <button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Cash</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Checking</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Savings</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Credit card</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Debit card</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Digital wallet</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Investment</button><button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Loan</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout--brass mt-4"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><div>
+      Already have a CSV from your bank? <a href="import.html" style="text-decoration:underline">Import it instead</a> —
+      accounts, balances and up to 3 years of history are created for you.</div></div>
+  </div>
+  </main>
+
+  <div style="position:fixed;bottom:0;inset-inline:0;padding:16px;border-top:1px solid var(--rule);background:var(--paper)">
+    <div class="container row gap-2" style="max-width:600px">
+      <button class="btn btn--ghost">Back</button><span class="grow"></span>
+      <button class="btn btn--primary">Continue</button>
+    </div>
+  </div>
+</div>
+
+<script src="../shell.js"></script>
+<script>mountShell("onboarding", { chrome: false });</script>
+</body>
+</html>

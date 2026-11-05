@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transactions · SpendTrack design</title>
+<link rel="stylesheet" href="../app.css">
+</head>
+<body>
+<div class="shell"><div class="content">
+
+
+<header class="appbar">
+  
+  <div class="col">
+    <span class="appbar__title">Transactions</span>
+    <span class="appbar__sub">1,284 records · Sep 2025</span>
+  </div>
+  <span class="appbar__spacer"></span>
+  <button class="btn btn--icon btn--ghost" aria-label="Search"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><button class="btn btn--icon btn--ghost" aria-label="Filter"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></button><button class="btn btn--icon btn--ghost" aria-label="More"><svg class="navitem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="19" cy="12" r="1.3" fill="currentColor"/></svg></button>
+</header>
+<main class="main">
+  <div class="chiprow">
+    <button class="chip" aria-pressed="true">All</button>
+    <button class="chip">Expenses</button>
+    <button class="chip">Income</button>
+    <button class="chip">Transfers</button>
+    <button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg> Account</button>
+    <button class="chip"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11V5a2 2 0 0 1 2-2h6l10 10-8 8z"/><circle cx="8" cy="8" r="1.4"/></svg> Category</button>
+    <button class="chip">Uncategorised <span class="badge">12</span></button>
+    <button class="chip">Needs review <span class="badge badge--warn">3</span></button>
+  </div>
+
+  <div class="container" style="padding-inline:0">
+    <div class="row gap-3 tiny muted" style="padding:8px 16px;border-bottom:1px solid var(--rule)">
+      <span>Showing 1–50 of 1,284</span><span class="grow"></span>
+      <span class="num">Out <span class="num "><span class="num__cur">$</span>4,193<span class="num__frac">.76</span></span></span><span class="num num--in">In <span class="num "><span class="num__cur">$</span>6,420<span class="num__frac">.00</span></span></span>
+    </div>
+
+    
+<section class="txn-day">
+  <div class="txn-day__head"><span class="txn-day__date">Today · 17 Sep</span><span class="txn-day__total">−$109.47</span></div>
+  
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-1)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Blue Bottle Coffee</span>
+    <span class="txn__meta"><span>Coffee shops</span><span>Amex Gold</span><span>10:42</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Coffee shops</span><span class="txn__col hide-mobile">Amex Gold</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>6<span class="num__frac">.75</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Whole Foods Market</span>
+    <span class="txn__meta"><span>Groceries</span><span>Chase Checking</span><span>09:15</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Groceries</span><span class="txn__col hide-mobile">Chase Checking</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>84<span class="num__frac">.32</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html" data-pending="true">
+  <span class="txn__icon" style="--cat:var(--cat-2)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Uber</span>
+    <span class="txn__meta"><span>Rideshare</span><span>Amex Gold</span><span>08:03</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Rideshare</span><span class="txn__col hide-mobile">Amex Gold</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>18<span class="num__frac">.40</span></span>
+    
+  </span>
+</a>
+    
+</section>
+
+    
+<section class="txn-day">
+  <div class="txn-day__head"><span class="txn-day__date">Tuesday · 16 Sep</span><span class="txn-day__total">+$3,100.53</span></div>
+  
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-7)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11V5a2 2 0 0 1 2-2h6l10 10-8 8z"/><circle cx="8" cy="8" r="1.4"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Refund · Nike Store</span>
+    <span class="txn__meta"><span>Shopping</span><span>Amex Gold</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Shopping</span><span class="txn__col hide-mobile">Amex Gold</span>
+  <span class="txn__amount txn__amount--in">
+    <span class="num ">+<span class="num__cur">$</span>129<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Freelance · Vireo Studio</span>
+    <span class="txn__meta"><span>Side income</span><span>Chase Checking</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Side income</span><span class="txn__col hide-mobile">Chase Checking</span>
+  <span class="txn__amount txn__amount--in">
+    <span class="num ">+<span class="num__cur">$</span>3,200<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-7)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11V5a2 2 0 0 1 2-2h6l10 10-8 8z"/><circle cx="8" cy="8" r="1.4"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Kinokuniya Books</span>
+    <span class="txn__meta"><span>Shopping</span><span>Amex Gold</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Shopping</span><span class="txn__col hide-mobile">Amex Gold</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>43<span class="num__frac">.50</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-2)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Tokyo Metro</span>
+    <span class="txn__meta"><span>Transport</span><span>Wise Multi-currency</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Transport</span><span class="txn__col hide-mobile">Wise Multi-currency</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>4<span class="num__frac">.20</span></span>
+    <small>¥620 @ 147.6</small>
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">To Emergency Fund</span>
+    <span class="txn__meta"><span>Transfer</span><span>Checking → Ally Savings</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Transfer</span><span class="txn__col hide-mobile">Checking → Ally Savings</span>
+  <span class="txn__amount txn__amount--xfer">
+    <span class="num "><span class="num__cur">$</span>500<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+    
+</section>
+
+    
+<section class="txn-day">
+  <div class="txn-day__head"><span class="txn-day__date">Monday · 15 Sep</span><span class="txn-day__total">−$287.91</span></div>
+  
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-6)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Con Edison</span>
+    <span class="txn__meta"><span>Utilities</span><span>Chase Checking</span><span>Auto-pay</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Utilities</span><span class="txn__col hide-mobile">Chase Checking</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>112<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-3)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Trader Joe's</span>
+    <span class="txn__meta"><span>Groceries</span><span>Chase Checking</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Groceries</span><span class="txn__col hide-mobile">Chase Checking</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>61<span class="num__frac">.18</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-12)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v2"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H5"/><path d="M16 13h.01"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Amex Gold payment</span>
+    <span class="txn__meta"><span>Credit card payment</span><span>Checking → Amex</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Credit card payment</span><span class="txn__col hide-mobile">Checking → Amex</span>
+  <span class="txn__amount txn__amount--xfer">
+    <span class="num "><span class="num__cur">$</span>1,240<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-8)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Rite Aid</span>
+    <span class="txn__meta"><span>Health</span><span>Amex Gold</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Health</span><span class="txn__col hide-mobile">Amex Gold</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>24<span class="num__frac">.73</span></span>
+    
+  </span>
+</a>
+      
+<a class="txn" href="transaction-detail.html">
+  <span class="txn__icon" style="--cat:var(--cat-1)"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 9l1.5-5h15L21 9"/><path d="M9 21v-6h6v6"/></svg></span>
+  <span class="txn__body">
+    <span class="txn__name">Split · Dinner at Lilia</span>
+    <span class="txn__meta"><span>Dining out</span><span>3 people</span><span>Amex Gold</span></span>
+  </span>
+  <span class="txn__col hide-mobile">Dining out</span><span class="txn__col hide-mobile">3 people</span>
+  <span class="txn__amount ">
+    <span class="num ">−<span class="num__cur">$</span>90<span class="num__frac">.00</span></span>
+    
+  </span>
+</a>
+    
+</section>
+
+    <div class="row" style="justify-content:center;padding:24px">
+      <button class="btn btn--secondary btn--sm">Load 50 more</button>
+    </div>
+  </div>
+</main>
+</div></div>
+<script src="../shell.js"></script>
+<script>mountShell("transactions", { chrome: true });</script>
+</body>
+</html>
